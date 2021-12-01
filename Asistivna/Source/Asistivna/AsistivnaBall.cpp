@@ -44,6 +44,10 @@ AAsistivnaBall::AAsistivnaBall()
 	RollTorque = 50000000.0f;
 	JumpImpulse = 350000.0f;
 	bCanJump = true; // Start being able to jump
+
+	T = 0;
+	t = 0;
+	throwFlag = false;
 }
 
 
@@ -54,6 +58,8 @@ void AAsistivnaBall::SetupPlayerInputComponent(class UInputComponent* PlayerInpu
 	PlayerInputComponent->BindAxis("MoveForward", this, &AAsistivnaBall::MoveForward);
 
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &AAsistivnaBall::Jump);
+	PlayerInputComponent->BindAction("Throw", IE_Pressed, this, &AAsistivnaBall::Throw);
+	PlayerInputComponent->BindAction("Roll", IE_Pressed, this, &AAsistivnaBall::Roll);
 
 	// handle touch devices
 	PlayerInputComponent->BindTouch(IE_Pressed, this, &AAsistivnaBall::TouchStarted);
@@ -70,6 +76,23 @@ void AAsistivnaBall::MoveForward(float Val)
 {
 	const FVector Torque = FVector(0.f, Val * RollTorque, 0.f);
 	Ball->AddTorqueInRadians(Torque);	
+}
+
+void AAsistivnaBall::Throw()
+{
+	//bacanje loptice po zraku
+	//zasada ce biti parabola
+	t = 0;
+	T = 0;
+	throwFlag = true;
+	pocetna_pozicija = GetActorLocation();
+	IzracunajKrajnjuPoziciju();
+}
+
+void AAsistivnaBall::Roll()
+{
+	const FVector Torque = FVector(0.f, strength * RollTorque, 0.f);
+	Ball->AddTorqueInRadians(Torque);
 }
 
 void AAsistivnaBall::Jump()
@@ -108,4 +131,40 @@ void AAsistivnaBall::TouchStopped(ETouchIndex::Type FingerIndex, FVector Locatio
 		Ball->AddImpulse(Impulse);
 		bCanJump = false;
 	}
+}
+
+void AAsistivnaBall::IzracunajKrajnjuPoziciju()
+{
+	float x, y, z;
+	float dist = 2000;
+	FVector direction = GetActorForwardVector();
+
+	x = pocetna_pozicija.X + dist * direction.X;
+	y = pocetna_pozicija.Y + dist * direction.Y;
+	z = pocetna_pozicija.Z + dist * direction.Z;
+	krajnja_pozicija = FVector(x, y, z);
+}
+
+void AAsistivnaBall::Tick(float DeltaTime)
+{
+	if (throwFlag)
+	{
+		T = T + GetWorld()->GetDeltaSeconds();
+		float x, y, z;
+		if (t <= 1)
+		{
+			t = T / 3;
+			x = pocetna_pozicija.X * (1 - t) + krajnja_pozicija.X * t;
+			y = pocetna_pozicija.Y * (1 - t) + krajnja_pozicija.Y * t;
+			z = strength * FMath::Sin(t * PI) + pocetna_pozicija.Z;
+
+			FVector MoveDirection = FVector(x, y, z);
+			SetActorLocation(MoveDirection);
+		}
+		else
+		{
+			throwFlag = false;
+		}
+	}
+
 }

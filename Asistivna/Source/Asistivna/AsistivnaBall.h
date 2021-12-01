@@ -37,6 +37,9 @@ public:
 	/** Indicates whether we can currently jump, use to prevent double jumping */
 	bool bCanJump;
 
+	UPROPERTY(EditAnywhere, Category = "Movement")
+	float strength;
+
 protected:
 
 	/** Called for side to side input */
@@ -44,6 +47,10 @@ protected:
 
 	/** Called to move ball forwards and backwards */
 	void MoveForward(float Val);
+
+	//nacin bacanje lopte
+	void Throw();
+	void Roll();
 
 	/** Handle jump action. */
 	void Jump();
@@ -62,6 +69,14 @@ protected:
 	/** Handler for when a touch input stops. */
 	void TouchStopped(ETouchIndex::Type FingerIndex, FVector Location);
 
+	float T;
+	float t;
+	bool throwFlag;
+	FVector pocetna_pozicija;
+	FVector krajnja_pozicija;
+
+	void IzracunajKrajnjuPoziciju();
+
 public:
 	/** Returns Ball subobject **/
 	FORCEINLINE class UStaticMeshComponent* GetBall() const { return Ball; }
@@ -69,4 +84,6 @@ public:
 	FORCEINLINE class USpringArmComponent* GetSpringArm() const { return SpringArm; }
 	/** Returns Camera subobject **/
 	FORCEINLINE class UCameraComponent* GetCamera() const { return Camera; }
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
 };
