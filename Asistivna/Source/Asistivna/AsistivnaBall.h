@@ -40,6 +40,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Movement")
 	float strength;
 
+	UPROPERTY(EditAnywhere, Category = "Movement")
+	float spawnLocation;
+
 protected:
 
 	/** Called for side to side input */
@@ -51,6 +54,8 @@ protected:
 	//nacin bacanje lopte
 	void Throw();
 	void Roll();
+
+	void SpawnThrow();
 
 	/** Handle jump action. */
 	void Jump();
@@ -76,6 +81,9 @@ protected:
 	FVector krajnja_pozicija;
 
 	void IzracunajKrajnjuPoziciju();
+
+	UPROPERTY(EditAnywhere, Category = "BallClass")
+	TSubclassOf<class ABall> BallClass;
 
 public:
 	/** Returns Ball subobject **/

@@ -61,7 +61,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AAsistivnaBall); \
 #define Asistivna_Source_Asistivna_AsistivnaBall_h_12_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Ball() { return STRUCT_OFFSET(AAsistivnaBall, Ball); } \
 	FORCEINLINE static uint32 __PPO__SpringArm() { return STRUCT_OFFSET(AAsistivnaBall, SpringArm); } \
-	FORCEINLINE static uint32 __PPO__Camera() { return STRUCT_OFFSET(AAsistivnaBall, Camera); }
+	FORCEINLINE static uint32 __PPO__Camera() { return STRUCT_OFFSET(AAsistivnaBall, Camera); } \
+	FORCEINLINE static uint32 __PPO__BallClass() { return STRUCT_OFFSET(AAsistivnaBall, BallClass); }
 
 
 #define Asistivna_Source_Asistivna_AsistivnaBall_h_9_PROLOG

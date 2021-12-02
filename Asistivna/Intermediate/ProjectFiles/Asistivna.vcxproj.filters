@@ -54,4 +54,14 @@
       <Filter>Source\Asistivna</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\Asistivna\Ball.h">
+      <Filter>Source\Asistivna</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\Asistivna\Ball.cpp">
+      <Filter>Source\Asistivna</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>

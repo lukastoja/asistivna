@@ -8,6 +8,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Engine/CollisionProfile.h"
 #include "Engine/StaticMesh.h"
+#include "Ball.h"
 
 AAsistivnaBall::AAsistivnaBall()
 {
@@ -48,6 +49,8 @@ AAsistivnaBall::AAsistivnaBall()
 	T = 0;
 	t = 0;
 	throwFlag = false;
+
+	spawnLocation = 100;
 }
 
 
@@ -60,6 +63,7 @@ void AAsistivnaBall::SetupPlayerInputComponent(class UInputComponent* PlayerInpu
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &AAsistivnaBall::Jump);
 	PlayerInputComponent->BindAction("Throw", IE_Pressed, this, &AAsistivnaBall::Throw);
 	PlayerInputComponent->BindAction("Roll", IE_Pressed, this, &AAsistivnaBall::Roll);
+	PlayerInputComponent->BindAction("SpawnThrow", IE_Pressed, this, &AAsistivnaBall::SpawnThrow);
 
 	// handle touch devices
 	PlayerInputComponent->BindTouch(IE_Pressed, this, &AAsistivnaBall::TouchStarted);
@@ -93,6 +97,23 @@ void AAsistivnaBall::Roll()
 {
 	const FVector Torque = FVector(0.f, strength * RollTorque, 0.f);
 	Ball->AddTorqueInRadians(Torque);
+}
+
+void AAsistivnaBall::SpawnThrow()
+{
+	FActorSpawnParameters SpawnParameters;
+	SpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+	SpawnParameters.bNoFail = true;
+	SpawnParameters.Owner = this;
+	SpawnParameters.Instigator = this;
+
+	FTransform BallSpawnTransform;
+	BallSpawnTransform.SetLocation(GetActorForwardVector() * spawnLocation + GetActorLocation());
+	BallSpawnTransform.SetRotation(GetActorRotation().Quaternion());
+	BallSpawnTransform.SetScale3D(FVector(1.f));
+
+	ABall* ball =  GetWorld()->SpawnActor<ABall>(BallClass, BallSpawnTransform, SpawnParameters);
+	ball->SetUpThrowMethod();
 }
 
 void AAsistivnaBall::Jump()
