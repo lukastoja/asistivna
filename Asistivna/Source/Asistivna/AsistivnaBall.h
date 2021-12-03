@@ -26,6 +26,8 @@ class AAsistivnaBall : public APawn
 public:
 	AAsistivnaBall();
 
+	virtual void BeginPlay() override;
+
 	/** Vertical impulse to apply when pressing jump */
 	UPROPERTY(EditAnywhere, Category=Ball)
 	float JumpImpulse;
@@ -42,6 +44,12 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "Movement")
 	float spawnLocation;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MainHud", Meta = (BlueprintProtected = "true"))
+	TSubclassOf<class UUserWidget> MainHUDClass;
+
+	UPROPERTY(EditAnywhere, Category = "MainHud")
+	class UUserWidget* CurrentWidget;
 
 protected:
 

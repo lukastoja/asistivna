@@ -9,6 +9,9 @@
 #include "Engine/CollisionProfile.h"
 #include "Engine/StaticMesh.h"
 #include "Ball.h"
+#include "Engine/World.h"
+#include "Engine.h"
+#include "Blueprint/UserWidget.h"
 
 AAsistivnaBall::AAsistivnaBall()
 {
@@ -41,6 +44,10 @@ AAsistivnaBall::AAsistivnaBall()
 	Camera->SetupAttachment(SpringArm, USpringArmComponent::SocketName);
 	Camera->bUsePawnControlRotation = false; // We don't want the controller rotating the camera
 
+	//kreiranje widgeta
+	static ConstructorHelpers::FClassFinder<UUserWidget> MainHudClass(TEXT("/Game/Blueprints/widgets/MainWidget"));
+	MainHUDClass = MainHudClass.Class;
+
 	// Set up forces
 	RollTorque = 50000000.0f;
 	JumpImpulse = 350000.0f;
@@ -51,6 +58,18 @@ AAsistivnaBall::AAsistivnaBall()
 	throwFlag = false;
 
 	spawnLocation = 100;
+}
+
+void AAsistivnaBall::BeginPlay()
+{
+	Super::BeginPlay();
+
+	CurrentWidget = CreateWidget<UUserWidget>(GetWorld(), MainHUDClass);
+
+	if (CurrentWidget)
+	{
+		CurrentWidget->AddToViewport();
+	}
 }
 
 
