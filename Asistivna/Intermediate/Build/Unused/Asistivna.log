@@ -1,3 +1,6 @@
-﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\Epic Games\asistivna).
+﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\Programiranje\Faks\Asistivna\asistivna).
+  Parsing headers for AsistivnaEditor
+    Running UnrealHeaderTool "D:\Programiranje\Faks\Asistivna\asistivna\Asistivna\Asistivna.uproject" "D:\Programiranje\Faks\Asistivna\asistivna\Asistivna\Intermediate\Build\Win64\AsistivnaEditor\Development\AsistivnaEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for AsistivnaEditor in 8,3245781 seconds
   Target is up to date
-  Total execution time: 1,65 seconds
+  Total execution time: 10,74 seconds

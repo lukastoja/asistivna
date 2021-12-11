@@ -58,6 +58,7 @@ AAsistivnaBall::AAsistivnaBall()
 	throwFlag = false;
 
 	spawnLocation = 100;
+	BarCounter = 0;
 }
 
 void AAsistivnaBall::BeginPlay()
@@ -207,4 +208,10 @@ void AAsistivnaBall::Tick(float DeltaTime)
 		}
 	}
 
+	BarCounter = BarCounter < 1 ? BarCounter + DeltaTime : 0;	
+
+}
+
+float AAsistivnaBall::GetBarCounter() {
+	return BarCounter;
 }

@@ -29,11 +29,15 @@ public:
 	virtual void BeginPlay() override;
 
 	/** Vertical impulse to apply when pressing jump */
-	UPROPERTY(EditAnywhere, Category=Ball)
+	UPROPERTY(EditAnywhere, Category="Ball")
 	float JumpImpulse;
 
+	/** Bar counter*/
+	UPROPERTY(EditAnywhere, Category = "Bar")
+	float BarCounter;
+
 	/** Torque to apply when trying to roll ball */
-	UPROPERTY(EditAnywhere, Category=Ball)
+	UPROPERTY(EditAnywhere, Category="Ball")
 	float RollTorque;
 
 	/** Indicates whether we can currently jump, use to prevent double jumping */
@@ -47,6 +51,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MainHud", Meta = (BlueprintProtected = "true"))
 	TSubclassOf<class UUserWidget> MainHUDClass;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Bar", Meta = (BlueprintProtected = "true"))
+	TSubclassOf<class UUserWidget> BarHUDClass;
 
 	UPROPERTY(EditAnywhere, Category = "MainHud")
 	class UUserWidget* CurrentWidget;
@@ -91,7 +98,7 @@ protected:
 	void IzracunajKrajnjuPoziciju();
 
 	UPROPERTY(EditAnywhere, Category = "BallClass")
-	TSubclassOf<class ABall> BallClass;
+	TSubclassOf<class ABall> BallClass;	
 
 public:
 	/** Returns Ball subobject **/
@@ -102,4 +109,7 @@ public:
 	FORCEINLINE class UCameraComponent* GetCamera() const { return Camera; }
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	/** Widget bar. */
+	UFUNCTION(BlueprintPure, Category = "Bar")
+	float GetBarCounter();
 };

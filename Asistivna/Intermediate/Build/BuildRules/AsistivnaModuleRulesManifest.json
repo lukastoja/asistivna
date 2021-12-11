@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"D:\\Epic Games\\asistivna\\Asistivna\\Source\\Asistivna\\Asistivna.Build.cs",
-		"D:\\Epic Games\\asistivna\\Asistivna\\Source\\Asistivna.Target.cs",
-		"D:\\Epic Games\\asistivna\\Asistivna\\Source\\AsistivnaEditor.Target.cs"
+		"D:\\Programiranje\\Faks\\Asistivna\\asistivna\\Asistivna\\Source\\Asistivna\\Asistivna.Build.cs",
+		"D:\\Programiranje\\Faks\\Asistivna\\asistivna\\Asistivna\\Source\\Asistivna.Target.cs",
+		"D:\\Programiranje\\Faks\\Asistivna\\asistivna\\Asistivna\\Source\\AsistivnaEditor.Target.cs"
 	],
 	"EngineVersion": "4.24.3"
 }

@@ -14,8 +14,28 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define ASISTIVNA_AsistivnaBall_generated_h
 
 #define Asistivna_Source_Asistivna_AsistivnaBall_h_12_SPARSE_DATA
-#define Asistivna_Source_Asistivna_AsistivnaBall_h_12_RPC_WRAPPERS
-#define Asistivna_Source_Asistivna_AsistivnaBall_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define Asistivna_Source_Asistivna_AsistivnaBall_h_12_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execGetBarCounter) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetBarCounter(); \
+		P_NATIVE_END; \
+	}
+
+
+#define Asistivna_Source_Asistivna_AsistivnaBall_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGetBarCounter) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetBarCounter(); \
+		P_NATIVE_END; \
+	}
+
+
 #define Asistivna_Source_Asistivna_AsistivnaBall_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAAsistivnaBall(); \
