@@ -13,6 +13,14 @@ class AAsistivnaGameMode : public AGameModeBase
 
 public:
 	AAsistivnaGameMode();
+
+	virtual void BeginPlay() override;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MainHud", Meta = (BlueprintProtected = "true"))
+	TSubclassOf<class UUserWidget> MainHUD;
+
+	UPROPERTY(EditAnywhere, Category = "MainHud")
+	class UUserWidget* CurrentWidget;
 };
 
 

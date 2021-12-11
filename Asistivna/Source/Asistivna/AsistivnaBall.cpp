@@ -46,7 +46,7 @@ AAsistivnaBall::AAsistivnaBall()
 
 	//kreiranje widgeta
 	static ConstructorHelpers::FClassFinder<UUserWidget> MainHudClass(TEXT("/Game/Blueprints/widgets/MainWidget"));
-	MainHUDClass = MainHudClass.Class;
+	MainHUD = MainHudClass.Class;
 
 	// Set up forces
 	RollTorque = 50000000.0f;
@@ -59,17 +59,25 @@ AAsistivnaBall::AAsistivnaBall()
 
 	spawnLocation = 100;
 	BarCounter = 0;
+	brzinaBara = 0.025;
+	barFlag = true;
 }
 
 void AAsistivnaBall::BeginPlay()
 {
 	Super::BeginPlay();
 
-	CurrentWidget = CreateWidget<UUserWidget>(GetWorld(), MainHUDClass);
-
-	if (CurrentWidget)
+	UWorld* TheWorld = GetWorld();
+	FString CurrentLevel = TheWorld->GetMapName();
+	CurrentLevel.RemoveFromStart(GetWorld()->StreamingLevelsPrefix);
+	if (CurrentLevel != "MainMenuMap")
 	{
-		CurrentWidget->AddToViewport();
+		CurrentWidget = CreateWidget<UUserWidget>(GetWorld(), MainHUD);
+
+		if (CurrentWidget)
+		{
+			CurrentWidget->AddToViewport();
+		}
 	}
 }
 
@@ -208,8 +216,25 @@ void AAsistivnaBall::Tick(float DeltaTime)
 		}
 	}
 
-	BarCounter = BarCounter < 1 ? BarCounter + DeltaTime : 0;	
+	//BarCounter = BarCounter < 1 ? BarCounter + DeltaTime : 0;	//ovo mi se ne svidja jer je to anton radio :)
 
+	if (barFlag)
+	{
+		BarCounter = BarCounter + brzinaBara;
+	}
+	else
+	{
+		BarCounter = BarCounter - brzinaBara;
+	}
+
+	if (BarCounter >= 1)
+	{
+		barFlag = false;
+	}
+	else if (BarCounter <= 0)
+	{
+		barFlag = true;
+	}
 }
 
 float AAsistivnaBall::GetBarCounter() {

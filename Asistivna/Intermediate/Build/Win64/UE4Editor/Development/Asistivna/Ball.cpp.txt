@@ -1,5 +1,5 @@
-D:\Programiranje\Faks\Asistivna\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Development\Asistivna\Definitions.Asistivna.h
-D:\Programiranje\Faks\Asistivna\asistivna\Asistivna\Source\Asistivna\Ball.h
-D:\Programiranje\Faks\Asistivna\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Inc\Asistivna\Ball.generated.h
-D:\Games\EpicGames\Games\Anno\UE_4.24\Engine\Source\Runtime\Engine\Classes\Engine/CollisionProfile.h
-D:\Games\EpicGames\Games\Anno\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CollisionProfile.generated.h
+D:\Epic Games\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Development\Asistivna\Definitions.Asistivna.h
+D:\Epic Games\asistivna\Asistivna\Source\Asistivna\Ball.h
+D:\Epic Games\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Inc\Asistivna\Ball.generated.h
+C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Engine/CollisionProfile.h
+C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CollisionProfile.generated.h

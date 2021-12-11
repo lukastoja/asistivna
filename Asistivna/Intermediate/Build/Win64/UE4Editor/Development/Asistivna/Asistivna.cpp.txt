@@ -1,2 +1,2 @@
-D:\Programiranje\Faks\Asistivna\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Development\Asistivna\Definitions.Asistivna.h
-D:\Programiranje\Faks\Asistivna\asistivna\Asistivna\Source\Asistivna\Asistivna.h
+D:\Epic Games\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Development\Asistivna\Definitions.Asistivna.h
+D:\Epic Games\asistivna\Asistivna\Source\Asistivna\Asistivna.h

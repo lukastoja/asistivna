@@ -36,6 +36,11 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Bar")
 	float BarCounter;
 
+	UPROPERTY(EditAnywhere, Category = "Bar")
+	float brzinaBara;
+
+	bool barFlag;
+
 	/** Torque to apply when trying to roll ball */
 	UPROPERTY(EditAnywhere, Category="Ball")
 	float RollTorque;
@@ -50,10 +55,7 @@ public:
 	float spawnLocation;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MainHud", Meta = (BlueprintProtected = "true"))
-	TSubclassOf<class UUserWidget> MainHUDClass;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Bar", Meta = (BlueprintProtected = "true"))
-	TSubclassOf<class UUserWidget> BarHUDClass;
+	TSubclassOf<class UUserWidget> MainHUD;
 
 	UPROPERTY(EditAnywhere, Category = "MainHud")
 	class UUserWidget* CurrentWidget;
