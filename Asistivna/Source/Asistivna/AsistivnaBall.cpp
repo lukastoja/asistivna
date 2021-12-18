@@ -91,6 +91,7 @@ void AAsistivnaBall::SetupPlayerInputComponent(class UInputComponent* PlayerInpu
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &AAsistivnaBall::Jump);
 	PlayerInputComponent->BindAction("Throw", IE_Pressed, this, &AAsistivnaBall::Throw);
 	PlayerInputComponent->BindAction("Roll", IE_Pressed, this, &AAsistivnaBall::Roll);
+	PlayerInputComponent->BindAction("BarRoll", IE_Pressed, this, &AAsistivnaBall::BarRoll);
 	PlayerInputComponent->BindAction("SpawnThrow", IE_Pressed, this, &AAsistivnaBall::SpawnThrow);
 
 	// handle touch devices
@@ -124,6 +125,12 @@ void AAsistivnaBall::Throw()
 void AAsistivnaBall::Roll()
 {
 	const FVector Torque = FVector(0.f, strength * RollTorque, 0.f);
+	Ball->AddTorqueInRadians(Torque);
+}
+
+void AAsistivnaBall::BarRoll()
+{
+	const FVector Torque = FVector(0.f, strength * GetBarCounter() * RollTorque, 0.f);
 	Ball->AddTorqueInRadians(Torque);
 }
 
@@ -217,6 +224,7 @@ void AAsistivnaBall::Tick(float DeltaTime)
 	}
 
 	//BarCounter = BarCounter < 1 ? BarCounter + DeltaTime : 0;	//ovo mi se ne svidja jer je to anton radio :)
+	// moj optimalni kod unistavas
 
 	if (barFlag)
 	{

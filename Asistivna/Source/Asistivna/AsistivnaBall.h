@@ -71,6 +71,7 @@ protected:
 	//nacin bacanje lopte
 	void Throw();
 	void Roll();
+	void BarRoll();
 
 	void SpawnThrow();
 

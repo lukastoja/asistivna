@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define ASISTIVNA_AsistivnaGameMode_generated_h
 
-#define Asistivna_Source_Asistivna_AsistivnaGameMode_h_12_SPARSE_DATA
-#define Asistivna_Source_Asistivna_AsistivnaGameMode_h_12_RPC_WRAPPERS
-#define Asistivna_Source_Asistivna_AsistivnaGameMode_h_12_RPC_WRAPPERS_NO_PURE_DECLS
-#define Asistivna_Source_Asistivna_AsistivnaGameMode_h_12_INCLASS_NO_PURE_DECLS \
+#define asistivna_Source_Asistivna_AsistivnaGameMode_h_12_SPARSE_DATA
+#define asistivna_Source_Asistivna_AsistivnaGameMode_h_12_RPC_WRAPPERS
+#define asistivna_Source_Asistivna_AsistivnaGameMode_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define asistivna_Source_Asistivna_AsistivnaGameMode_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAAsistivnaGameMode(); \
 	friend struct Z_Construct_UClass_AAsistivnaGameMode_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(AAsistivnaGameMode)
 
 
-#define Asistivna_Source_Asistivna_AsistivnaGameMode_h_12_INCLASS \
+#define asistivna_Source_Asistivna_AsistivnaGameMode_h_12_INCLASS \
 private: \
 	static void StaticRegisterNativesAAsistivnaGameMode(); \
 	friend struct Z_Construct_UClass_AAsistivnaGameMode_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(AAsistivnaGameMode)
 
 
-#define Asistivna_Source_Asistivna_AsistivnaGameMode_h_12_STANDARD_CONSTRUCTORS \
+#define asistivna_Source_Asistivna_AsistivnaGameMode_h_12_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	ASISTIVNA_API AAsistivnaGameMode(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AAsistivnaGameMode) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define Asistivna_Source_Asistivna_AsistivnaGameMode_h_12_ENHANCED_CONSTRUCTORS \
+#define asistivna_Source_Asistivna_AsistivnaGameMode_h_12_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ASISTIVNA_API AAsistivnaGameMode(AAsistivnaGameMode&&); \
@@ -58,28 +58,28 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AAsistivnaGameMode); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AAsistivnaGameMode)
 
 
-#define Asistivna_Source_Asistivna_AsistivnaGameMode_h_12_PRIVATE_PROPERTY_OFFSET
-#define Asistivna_Source_Asistivna_AsistivnaGameMode_h_9_PROLOG
-#define Asistivna_Source_Asistivna_AsistivnaGameMode_h_12_GENERATED_BODY_LEGACY \
+#define asistivna_Source_Asistivna_AsistivnaGameMode_h_12_PRIVATE_PROPERTY_OFFSET
+#define asistivna_Source_Asistivna_AsistivnaGameMode_h_9_PROLOG
+#define asistivna_Source_Asistivna_AsistivnaGameMode_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Asistivna_Source_Asistivna_AsistivnaGameMode_h_12_PRIVATE_PROPERTY_OFFSET \
-	Asistivna_Source_Asistivna_AsistivnaGameMode_h_12_SPARSE_DATA \
-	Asistivna_Source_Asistivna_AsistivnaGameMode_h_12_RPC_WRAPPERS \
-	Asistivna_Source_Asistivna_AsistivnaGameMode_h_12_INCLASS \
-	Asistivna_Source_Asistivna_AsistivnaGameMode_h_12_STANDARD_CONSTRUCTORS \
+	asistivna_Source_Asistivna_AsistivnaGameMode_h_12_PRIVATE_PROPERTY_OFFSET \
+	asistivna_Source_Asistivna_AsistivnaGameMode_h_12_SPARSE_DATA \
+	asistivna_Source_Asistivna_AsistivnaGameMode_h_12_RPC_WRAPPERS \
+	asistivna_Source_Asistivna_AsistivnaGameMode_h_12_INCLASS \
+	asistivna_Source_Asistivna_AsistivnaGameMode_h_12_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Asistivna_Source_Asistivna_AsistivnaGameMode_h_12_GENERATED_BODY \
+#define asistivna_Source_Asistivna_AsistivnaGameMode_h_12_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Asistivna_Source_Asistivna_AsistivnaGameMode_h_12_PRIVATE_PROPERTY_OFFSET \
-	Asistivna_Source_Asistivna_AsistivnaGameMode_h_12_SPARSE_DATA \
-	Asistivna_Source_Asistivna_AsistivnaGameMode_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	Asistivna_Source_Asistivna_AsistivnaGameMode_h_12_INCLASS_NO_PURE_DECLS \
-	Asistivna_Source_Asistivna_AsistivnaGameMode_h_12_ENHANCED_CONSTRUCTORS \
+	asistivna_Source_Asistivna_AsistivnaGameMode_h_12_PRIVATE_PROPERTY_OFFSET \
+	asistivna_Source_Asistivna_AsistivnaGameMode_h_12_SPARSE_DATA \
+	asistivna_Source_Asistivna_AsistivnaGameMode_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	asistivna_Source_Asistivna_AsistivnaGameMode_h_12_INCLASS_NO_PURE_DECLS \
+	asistivna_Source_Asistivna_AsistivnaGameMode_h_12_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -87,7 +87,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> ASISTIVNA_API UClass* StaticClass<class AAsistivnaGameMode>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID Asistivna_Source_Asistivna_AsistivnaGameMode_h
+#define CURRENT_FILE_ID asistivna_Source_Asistivna_AsistivnaGameMode_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
