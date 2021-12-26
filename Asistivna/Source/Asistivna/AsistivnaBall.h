@@ -36,6 +36,14 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Bar")
 	float BarCounter;
 
+	/** Bar faze*/
+	UPROPERTY(EditAnywhere, Category = "Bar")
+	int BarFaze;
+
+	/** Bar location*/
+	UPROPERTY(EditAnywhere, Category = "Bar")
+	FVector BallLocation;
+
 	UPROPERTY(EditAnywhere, Category = "Bar")
 	float brzinaBara;
 

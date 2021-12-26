@@ -59,6 +59,7 @@ AAsistivnaBall::AAsistivnaBall()
 
 	spawnLocation = 100;
 	BarCounter = 0;
+	BarFaze = -3;
 	brzinaBara = 0.025;
 	barFlag = true;
 }
@@ -130,8 +131,18 @@ void AAsistivnaBall::Roll()
 
 void AAsistivnaBall::BarRoll()
 {
-	const FVector Torque = FVector(0.f, strength * GetBarCounter() * RollTorque, 0.f);
-	Ball->AddTorqueInRadians(Torque);
+	if (BarFaze == 0) {
+		BallLocation = GetActorLocation();
+	}
+	else if (BarFaze == 1) {
+		BallLocation = GetActorLocation();
+	}
+	else if (BarFaze == 2) {
+		const FVector Torque = FVector(0.f, strength * GetBarCounter() * RollTorque, 0.f);
+		Ball->AddTorqueInRadians(Torque);
+		BarFaze = -3;
+	}
+	++BarFaze;
 }
 
 void AAsistivnaBall::SpawnThrow()
@@ -242,6 +253,15 @@ void AAsistivnaBall::Tick(float DeltaTime)
 	else if (BarCounter <= 0)
 	{
 		barFlag = true;
+	}
+	
+	if (BarFaze < 0) {
+		BarFaze = 0;
+		BallLocation = GetActorLocation();
+	}
+	else if (BarFaze == 0) {
+		BallLocation.Y += GetBarCounter() * 30 - 15;
+		SetActorLocation(BallLocation);
 	}
 }
 
