@@ -47,6 +47,12 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Bar")
 	float brzinaBara;
 
+	UPROPERTY(EditAnywhere, Category = "Bar")
+		float polovica_duljine;
+
+	UPROPERTY(EditAnywhere, Category = "Bar")
+		float duljina;
+
 	bool barFlag;
 
 	/** Torque to apply when trying to roll ball */

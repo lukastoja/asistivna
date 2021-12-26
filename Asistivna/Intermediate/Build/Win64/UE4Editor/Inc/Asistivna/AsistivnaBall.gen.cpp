@@ -21,6 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ASISTIVNA_API UClass* Z_Construct_UClass_ABall_NoRegister();
 	UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
@@ -104,9 +105,25 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RollTorque;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_duljina_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_duljina;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_polovica_duljine_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_polovica_duljine;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_brzinaBara_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_brzinaBara;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BallLocation_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_BallLocation;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BarFaze_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_BarFaze;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BarCounter_MetaData[];
 #endif
@@ -192,12 +209,44 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_RollTorque = { "RollTorque", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAsistivnaBall, RollTorque), METADATA_PARAMS(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_RollTorque_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_RollTorque_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_duljina_MetaData[] = {
+		{ "Category", "Bar" },
+		{ "ModuleRelativePath", "AsistivnaBall.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_duljina = { "duljina", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAsistivnaBall, duljina), METADATA_PARAMS(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_duljina_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_duljina_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_polovica_duljine_MetaData[] = {
+		{ "Category", "Bar" },
+		{ "ModuleRelativePath", "AsistivnaBall.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_polovica_duljine = { "polovica_duljine", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAsistivnaBall, polovica_duljine), METADATA_PARAMS(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_polovica_duljine_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_polovica_duljine_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_brzinaBara_MetaData[] = {
 		{ "Category", "Bar" },
 		{ "ModuleRelativePath", "AsistivnaBall.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_brzinaBara = { "brzinaBara", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAsistivnaBall, brzinaBara), METADATA_PARAMS(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_brzinaBara_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_brzinaBara_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_BallLocation_MetaData[] = {
+		{ "Category", "Bar" },
+		{ "Comment", "/** Bar location*/" },
+		{ "ModuleRelativePath", "AsistivnaBall.h" },
+		{ "ToolTip", "Bar location" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_BallLocation = { "BallLocation", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAsistivnaBall, BallLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_BallLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_BallLocation_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_BarFaze_MetaData[] = {
+		{ "Category", "Bar" },
+		{ "Comment", "/** Bar faze*/" },
+		{ "ModuleRelativePath", "AsistivnaBall.h" },
+		{ "ToolTip", "Bar faze" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_BarFaze = { "BarFaze", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAsistivnaBall, BarFaze), METADATA_PARAMS(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_BarFaze_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_BarFaze_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_BarCounter_MetaData[] = {
 		{ "Category", "Bar" },
@@ -256,7 +305,11 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_spawnLocation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_strength,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_RollTorque,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_duljina,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_polovica_duljine,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_brzinaBara,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_BallLocation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_BarFaze,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_BarCounter,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_JumpImpulse,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_Camera,
@@ -290,7 +343,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAsistivnaBall, 734861135);
+	IMPLEMENT_CLASS(AAsistivnaBall, 1313329114);
 	template<> ASISTIVNA_API UClass* StaticClass<AAsistivnaBall>()
 	{
 		return AAsistivnaBall::StaticClass();

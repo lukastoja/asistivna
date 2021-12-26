@@ -62,6 +62,8 @@ AAsistivnaBall::AAsistivnaBall()
 	BarFaze = -3;
 	brzinaBara = 0.025;
 	barFlag = true;
+	polovica_duljine = 15;
+	duljina = 10;
 }
 
 void AAsistivnaBall::BeginPlay()
@@ -257,10 +259,11 @@ void AAsistivnaBall::Tick(float DeltaTime)
 	
 	if (BarFaze < 0) {
 		BarFaze = 0;
-		BallLocation = GetActorLocation();
 	}
 	else if (BarFaze == 0) {
-		BallLocation.Y += GetBarCounter() * 30 - 15;
+		BallLocation = GetActorLocation();
+		BallLocation.Y = GetBarCounter() * duljina - polovica_duljine;
+		BallLocation.Z = 230;
 		SetActorLocation(BallLocation);
 	}
 }
