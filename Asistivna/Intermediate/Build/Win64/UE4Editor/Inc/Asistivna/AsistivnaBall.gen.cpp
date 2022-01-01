@@ -18,6 +18,8 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 	ENGINE_API UClass* Z_Construct_UClass_APawn();
 	UPackage* Z_Construct_UPackage__Script_Asistivna();
 	ASISTIVNA_API UFunction* Z_Construct_UFunction_AAsistivnaBall_GetBarCounter();
+	ASISTIVNA_API UFunction* Z_Construct_UFunction_AAsistivnaBall_GetBarFaze();
+	ASISTIVNA_API UFunction* Z_Construct_UFunction_AAsistivnaBall_GetLineAngleSpeed();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ASISTIVNA_API UClass* Z_Construct_UClass_ABall_NoRegister();
 	UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
@@ -31,6 +33,8 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 		UClass* Class = AAsistivnaBall::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "GetBarCounter", &AAsistivnaBall::execGetBarCounter },
+			{ "GetBarFaze", &AAsistivnaBall::execGetBarFaze },
+			{ "GetLineAngleSpeed", &AAsistivnaBall::execGetLineAngleSpeed },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -69,6 +73,76 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AAsistivnaBall_GetBarFaze_Statics
+	{
+		struct AsistivnaBall_eventGetBarFaze_Parms
+		{
+			int32 ReturnValue;
+		};
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UFunction_AAsistivnaBall_GetBarFaze_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AsistivnaBall_eventGetBarFaze_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AAsistivnaBall_GetBarFaze_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AAsistivnaBall_GetBarFaze_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AAsistivnaBall_GetBarFaze_Statics::Function_MetaDataParams[] = {
+		{ "Category", "BarFaze" },
+		{ "Comment", "/** Bar Faze. */" },
+		{ "ModuleRelativePath", "AsistivnaBall.h" },
+		{ "ToolTip", "Bar Faze." },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AAsistivnaBall_GetBarFaze_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AAsistivnaBall, nullptr, "GetBarFaze", nullptr, nullptr, sizeof(AsistivnaBall_eventGetBarFaze_Parms), Z_Construct_UFunction_AAsistivnaBall_GetBarFaze_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AAsistivnaBall_GetBarFaze_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AAsistivnaBall_GetBarFaze_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AAsistivnaBall_GetBarFaze_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AAsistivnaBall_GetBarFaze()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AAsistivnaBall_GetBarFaze_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AAsistivnaBall_GetLineAngleSpeed_Statics
+	{
+		struct AsistivnaBall_eventGetLineAngleSpeed_Parms
+		{
+			int32 ReturnValue;
+		};
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UFunction_AAsistivnaBall_GetLineAngleSpeed_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AsistivnaBall_eventGetLineAngleSpeed_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AAsistivnaBall_GetLineAngleSpeed_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AAsistivnaBall_GetLineAngleSpeed_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AAsistivnaBall_GetLineAngleSpeed_Statics::Function_MetaDataParams[] = {
+		{ "Category", "LineAngle" },
+		{ "Comment", "/** Line Angle. */" },
+		{ "ModuleRelativePath", "AsistivnaBall.h" },
+		{ "ToolTip", "Line Angle." },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AAsistivnaBall_GetLineAngleSpeed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AAsistivnaBall, nullptr, "GetLineAngleSpeed", nullptr, nullptr, sizeof(AsistivnaBall_eventGetLineAngleSpeed_Parms), Z_Construct_UFunction_AAsistivnaBall_GetLineAngleSpeed_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AAsistivnaBall_GetLineAngleSpeed_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AAsistivnaBall_GetLineAngleSpeed_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AAsistivnaBall_GetLineAngleSpeed_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AAsistivnaBall_GetLineAngleSpeed()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AAsistivnaBall_GetLineAngleSpeed_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_AAsistivnaBall_NoRegister()
 	{
 		return AAsistivnaBall::StaticClass();
@@ -104,6 +178,10 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RollTorque_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RollTorque;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LineAngle_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_LineAngle;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_duljina_MetaData[];
 #endif
@@ -154,6 +232,8 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AAsistivnaBall_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AAsistivnaBall_GetBarCounter, "GetBarCounter" }, // 4292856351
+		{ &Z_Construct_UFunction_AAsistivnaBall_GetBarFaze, "GetBarFaze" }, // 4155991262
+		{ &Z_Construct_UFunction_AAsistivnaBall_GetLineAngleSpeed, "GetLineAngleSpeed" }, // 3385417910
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsistivnaBall_Statics::Class_MetaDataParams[] = {
@@ -208,6 +288,15 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_RollTorque = { "RollTorque", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAsistivnaBall, RollTorque), METADATA_PARAMS(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_RollTorque_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_RollTorque_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_LineAngle_MetaData[] = {
+		{ "Category", "Line" },
+		{ "Comment", "/** Line angle*/" },
+		{ "ModuleRelativePath", "AsistivnaBall.h" },
+		{ "ToolTip", "Line angle" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_LineAngle = { "LineAngle", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAsistivnaBall, LineAngle), METADATA_PARAMS(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_LineAngle_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_LineAngle_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_duljina_MetaData[] = {
 		{ "Category", "Bar" },
@@ -305,6 +394,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_spawnLocation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_strength,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_RollTorque,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_LineAngle,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_duljina,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_polovica_duljine,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_brzinaBara,
@@ -343,7 +433,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAsistivnaBall, 1313329114);
+	IMPLEMENT_CLASS(AAsistivnaBall, 2185347050);
 	template<> ASISTIVNA_API UClass* StaticClass<AAsistivnaBall>()
 	{
 		return AAsistivnaBall::StaticClass();

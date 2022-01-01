@@ -49,7 +49,7 @@ AAsistivnaBall::AAsistivnaBall()
 	MainHUD = MainHudClass.Class;
 
 	// Set up forces
-	RollTorque = 50000000.0f;
+	RollTorque = 5000000.0f;
 	JumpImpulse = 350000.0f;
 	bCanJump = true; // Start being able to jump
 
@@ -59,11 +59,15 @@ AAsistivnaBall::AAsistivnaBall()
 
 	spawnLocation = 100;
 	BarCounter = 0;
-	BarFaze = -3;
+	BarFaze = 1;
 	brzinaBara = 0.025;
 	barFlag = true;
-	polovica_duljine = 15;
-	duljina = 10;
+
+	LineAngle = 0;
+	angleSpeed = -1;
+
+	polovica_duljine = 250;
+	duljina = 500;
 }
 
 void AAsistivnaBall::BeginPlay()
@@ -134,10 +138,8 @@ void AAsistivnaBall::Roll()
 void AAsistivnaBall::BarRoll()
 {
 	if (BarFaze == 0) {
-		BallLocation = GetActorLocation();
 	}
 	else if (BarFaze == 1) {
-		BallLocation = GetActorLocation();
 	}
 	else if (BarFaze == 2) {
 		const FVector Torque = FVector(0.f, strength * GetBarCounter() * RollTorque, 0.f);
@@ -266,8 +268,20 @@ void AAsistivnaBall::Tick(float DeltaTime)
 		BallLocation.Z = 230;
 		SetActorLocation(BallLocation);
 	}
+
+	LineAngle += angleSpeed;
+	if (LineAngle <= -180 || LineAngle >= 0)
+		angleSpeed *= -1;
 }
 
 float AAsistivnaBall::GetBarCounter() {
 	return BarCounter;
+}
+
+int AAsistivnaBall::GetBarFaze() {
+	return BarFaze;
+}
+
+int AAsistivnaBall::GetLineAngleSpeed() {
+	return angleSpeed;
 }

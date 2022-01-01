@@ -16,6 +16,22 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define Asistivna_Source_Asistivna_AsistivnaBall_h_12_SPARSE_DATA
 #define Asistivna_Source_Asistivna_AsistivnaBall_h_12_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execGetLineAngleSpeed) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(int32*)Z_Param__Result=P_THIS->GetLineAngleSpeed(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetBarFaze) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(int32*)Z_Param__Result=P_THIS->GetBarFaze(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execGetBarCounter) \
 	{ \
 		P_FINISH; \
@@ -26,6 +42,22 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 
 #define Asistivna_Source_Asistivna_AsistivnaBall_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGetLineAngleSpeed) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(int32*)Z_Param__Result=P_THIS->GetLineAngleSpeed(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetBarFaze) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(int32*)Z_Param__Result=P_THIS->GetBarFaze(); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execGetBarCounter) \
 	{ \

@@ -48,13 +48,18 @@ public:
 	float brzinaBara;
 
 	UPROPERTY(EditAnywhere, Category = "Bar")
-		float polovica_duljine;
+	float polovica_duljine;
 
 	UPROPERTY(EditAnywhere, Category = "Bar")
-		float duljina;
+	float duljina;
 
 	bool barFlag;
 
+	/** Line angle*/
+	UPROPERTY(EditAnywhere, Category = "Line")
+	int LineAngle;
+
+	int angleSpeed;
 	/** Torque to apply when trying to roll ball */
 	UPROPERTY(EditAnywhere, Category="Ball")
 	float RollTorque;
@@ -129,4 +134,11 @@ public:
 	/** Widget bar. */
 	UFUNCTION(BlueprintPure, Category = "Bar")
 	float GetBarCounter();
+	/** Bar Faze. */
+	UFUNCTION(BlueprintPure, Category = "BarFaze")
+	int GetBarFaze();
+
+	/** Line Angle. */
+	UFUNCTION(BlueprintPure, Category = "LineAngle")
+	int GetLineAngleSpeed();
 };
