@@ -60,7 +60,7 @@ AAsistivnaBall::AAsistivnaBall()
 	spawnLocation = 100;
 	BarCounter = 0;
 	BarFaze = 0;
-	brzinaBara = 0.05;
+	brzinaBara = 0.075;
 	barFlag = true;
 
 	LineAngle = 0;
@@ -141,7 +141,7 @@ void AAsistivnaBall::BarRoll()
 	}
 	else if (BarFaze == 1) {
 	}
-	else if (BarFaze == 3) {
+	else if (BarFaze == 4) {
 		FActorSpawnParameters SpawnParameters;
 		SpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 		SpawnParameters.bNoFail = true;
@@ -172,7 +172,9 @@ void AAsistivnaBall::SpawnThrow()
 	SpawnParameters.Instigator = this;
 
 	FTransform BallSpawnTransform;
-	BallSpawnTransform.SetLocation(GetActorForwardVector() * spawnLocation + GetActorLocation());
+	FVector new_ball_location = GetActorLocation();
+	new_ball_location.Z = 100;
+	BallSpawnTransform.SetLocation(GetActorForwardVector() * spawnLocation + new_ball_location);
 	BallSpawnTransform.SetRotation(GetActorRotation().Quaternion());
 	BallSpawnTransform.SetScale3D(FVector(1.f));
 
@@ -303,4 +305,37 @@ int AAsistivnaBall::GetLineAngleSpeed() {
 void AAsistivnaBall::SetLineVector(FVector VectorLine)
 {
 	lineVector = VectorLine;
+}
+
+void AAsistivnaBall::BallThrow() {
+	SpawnThrow();
+	BarFaze = 0;
+}
+
+void AAsistivnaBall::BallRoll() {
+	FActorSpawnParameters SpawnParameters;
+	SpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+	SpawnParameters.bNoFail = true;
+	SpawnParameters.Owner = this;
+	SpawnParameters.Instigator = this;
+
+	FTransform BallSpawnTransform;
+	FVector new_ball_location = GetActorLocation();
+	new_ball_location.Z = 100;
+	BallSpawnTransform.SetLocation(GetActorForwardVector() * spawnLocation + new_ball_location);
+	BallSpawnTransform.SetRotation(GetActorRotation().Quaternion());
+	BallSpawnTransform.SetScale3D(FVector(1.f));
+
+	ABall* ball = GetWorld()->SpawnActor<ABall>(BallClass, BallSpawnTransform, SpawnParameters);
+	const FVector Torque = FVector(0.f, strength * GetBarCounter() * RollTorque, 0.f);
+	ball->RollBall(Torque);
+	BarFaze = 0;
+}
+
+void AAsistivnaBall::IncreaseBarFaze() {
+	BarFaze += 1;
+}
+
+void AAsistivnaBall::DecreaseBarFaze() {
+	BarFaze -= 1;
 }

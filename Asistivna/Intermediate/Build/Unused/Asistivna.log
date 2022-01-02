@@ -1,12 +1,26 @@
-﻿  Using 'git status' to determine working set for adaptive non-unity build (E:\Epic Games\asistivna).
+﻿  Cleaning AsistivnaEditor and UnrealHeaderTool binaries...
+  Using 'git status' to determine working set for adaptive non-unity build (D:\Programiranje\Faks\Asistivna\asistivna).
+  Creating makefile for AsistivnaEditor (no existing makefile)
+  Parsing headers for AsistivnaEditor
+    Running UnrealHeaderTool "D:\Programiranje\Faks\Asistivna\asistivna\Asistivna\Asistivna.uproject" "D:\Programiranje\Faks\Asistivna\asistivna\Asistivna\Intermediate\Build\Win64\AsistivnaEditor\Development\AsistivnaEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for AsistivnaEditor in 7,5833234 seconds
   Building AsistivnaEditor...
-  Using Visual Studio 2019 14.29.30138 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 4 actions with 12 processes...
-    [1/4] AsistivnaGameMode.cpp
-    [2/4] UE4Editor-Asistivna.lib
-       Creating library E:\Epic Games\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Development\Asistivna\UE4Editor-Asistivna.lib and object E:\Epic Games\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Development\Asistivna\UE4Editor-Asistivna.exp
-    [3/4] UE4Editor-Asistivna.dll
-       Creating library E:\Epic Games\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Development\Asistivna\UE4Editor-Asistivna.suppressed.lib and object E:\Epic Games\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Development\Asistivna\UE4Editor-Asistivna.suppressed.exp
-    [4/4] AsistivnaEditor.target
-  Total time in Parallel executor: 82.57 seconds
-  Total execution time: 84.51 seconds
+  Using Visual Studio 2019 14.29.30136 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (D:\Windows Kits\10).
+  Building 13 actions with 8 processes...
+    [1/13] Default.rc2
+    [2/13] SharedPCH.Engine.ShadowErrors.cpp
+    [3/13] Asistivna.cpp
+    [4/13] Asistivna.init.gen.cpp
+    [5/13] Ball.cpp
+    [6/13] Ball.gen.cpp
+    [7/13] AsistivnaBall.gen.cpp
+    [8/13] AsistivnaGameMode.gen.cpp
+    [9/13] AsistivnaGameMode.cpp
+    [10/13] AsistivnaBall.cpp
+    [11/13] UE4Editor-Asistivna.lib
+       Creating library D:\Programiranje\Faks\Asistivna\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Development\Asistivna\UE4Editor-Asistivna.lib and object D:\Programiranje\Faks\Asistivna\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Development\Asistivna\UE4Editor-Asistivna.exp
+    [12/13] UE4Editor-Asistivna.dll
+       Creating library D:\Programiranje\Faks\Asistivna\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Development\Asistivna\UE4Editor-Asistivna.suppressed.lib and object D:\Programiranje\Faks\Asistivna\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Development\Asistivna\UE4Editor-Asistivna.suppressed.exp
+    [13/13] AsistivnaEditor.target
+  Total time in Parallel executor: 58,90 seconds
+  Total execution time: 70,60 seconds

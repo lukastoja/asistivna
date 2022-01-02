@@ -140,6 +140,10 @@ public:
 	/** Bar Faze. */
 	UFUNCTION(BlueprintPure, Category = "BarFaze")
 	int GetBarFaze();
+	UFUNCTION(BlueprintCallable, Category = "BarFaze")
+	void IncreaseBarFaze();
+	UFUNCTION(BlueprintCallable, Category = "BarFaze")
+	void DecreaseBarFaze();
 
 	/** Line Angle. */
 	UFUNCTION(BlueprintPure, Category = "LineAngle")
@@ -147,4 +151,10 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Line")
 	void SetLineVector(FVector VectorLine);
+
+	UFUNCTION(BlueprintCallable, Category = "BallRoll")
+	void BallRoll();
+
+	UFUNCTION(BlueprintCallable, Category = "BallThrow")
+	void BallThrow();
 };

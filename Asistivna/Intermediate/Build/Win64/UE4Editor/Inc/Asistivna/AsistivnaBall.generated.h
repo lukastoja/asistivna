@@ -17,6 +17,22 @@ struct FVector;
 #define Asistivna_Source_Asistivna_AsistivnaBall_h_12_SPARSE_DATA
 #define Asistivna_Source_Asistivna_AsistivnaBall_h_12_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execBallThrow) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->BallThrow(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execBallRoll) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->BallRoll(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execSetLineVector) \
 	{ \
 		P_GET_STRUCT(FVector,Z_Param_VectorLine); \
@@ -31,6 +47,22 @@ struct FVector;
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		*(int32*)Z_Param__Result=P_THIS->GetLineAngleSpeed(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execDecreaseBarFaze) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->DecreaseBarFaze(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execIncreaseBarFaze) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->IncreaseBarFaze(); \
 		P_NATIVE_END; \
 	} \
  \
@@ -53,6 +85,22 @@ struct FVector;
 
 #define Asistivna_Source_Asistivna_AsistivnaBall_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execBallThrow) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->BallThrow(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execBallRoll) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->BallRoll(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execSetLineVector) \
 	{ \
 		P_GET_STRUCT(FVector,Z_Param_VectorLine); \
@@ -67,6 +115,22 @@ struct FVector;
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		*(int32*)Z_Param__Result=P_THIS->GetLineAngleSpeed(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execDecreaseBarFaze) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->DecreaseBarFaze(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execIncreaseBarFaze) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->IncreaseBarFaze(); \
 		P_NATIVE_END; \
 	} \
  \
