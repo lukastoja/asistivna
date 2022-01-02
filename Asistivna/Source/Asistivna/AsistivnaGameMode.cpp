@@ -32,13 +32,13 @@ void AAsistivnaGameMode::BeginPlay()
 		{
 			CurrentWidget->AddToViewport();
 		}
+	}
 
-		APlayerController* PC = GetWorld()->GetFirstPlayerController();
-		if (PC)
-		{
-			PC->bShowMouseCursor = true;
-			PC->bEnableClickEvents = true;
-			PC->bEnableMouseOverEvents = true;
-		}
+	APlayerController* PC = GetWorld()->GetFirstPlayerController();
+	if (PC)
+	{
+		PC->bShowMouseCursor = true;
+		PC->bEnableClickEvents = true;
+		PC->bEnableMouseOverEvents = true;
 	}
 }

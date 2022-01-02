@@ -117,6 +117,9 @@ protected:
 	FVector pocetna_pozicija;
 	FVector krajnja_pozicija;
 
+	/**line vektor za spawn lopte u pravom smjeru**/
+	FVector lineVector;
+
 	void IzracunajKrajnjuPoziciju();
 
 	UPROPERTY(EditAnywhere, Category = "BallClass")
@@ -141,4 +144,7 @@ public:
 	/** Line Angle. */
 	UFUNCTION(BlueprintPure, Category = "LineAngle")
 	int GetLineAngleSpeed();
+
+	UFUNCTION(BlueprintCallable, Category = "Line")
+	void SetLineVector(FVector VectorLine);
 };

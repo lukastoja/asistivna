@@ -24,7 +24,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Movement")
 	float strength;
 	
-	void SetUpThrowMethod();
+	void SetUpThrowMethod(FVector lineVector);
 
 	void RollBall(FVector Torque);
 
@@ -38,7 +38,7 @@ protected:
 	FVector pocetna_pozicija;
 	FVector krajnja_pozicija;
 
-	void IzracunajKrajnjuPoziciju();
+	void IzracunajKrajnjuPoziciju(FVector lineVector);
 
 public:	
 	// Called every frame

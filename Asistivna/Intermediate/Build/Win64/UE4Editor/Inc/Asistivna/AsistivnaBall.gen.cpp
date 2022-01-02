@@ -20,10 +20,11 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 	ASISTIVNA_API UFunction* Z_Construct_UFunction_AAsistivnaBall_GetBarCounter();
 	ASISTIVNA_API UFunction* Z_Construct_UFunction_AAsistivnaBall_GetBarFaze();
 	ASISTIVNA_API UFunction* Z_Construct_UFunction_AAsistivnaBall_GetLineAngleSpeed();
+	ASISTIVNA_API UFunction* Z_Construct_UFunction_AAsistivnaBall_SetLineVector();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ASISTIVNA_API UClass* Z_Construct_UClass_ABall_NoRegister();
 	UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
@@ -35,6 +36,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 			{ "GetBarCounter", &AAsistivnaBall::execGetBarCounter },
 			{ "GetBarFaze", &AAsistivnaBall::execGetBarFaze },
 			{ "GetLineAngleSpeed", &AAsistivnaBall::execGetLineAngleSpeed },
+			{ "SetLineVector", &AAsistivnaBall::execSetLineVector },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -143,6 +145,39 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AAsistivnaBall_SetLineVector_Statics
+	{
+		struct AsistivnaBall_eventSetLineVector_Parms
+		{
+			FVector VectorLine;
+		};
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_VectorLine;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AAsistivnaBall_SetLineVector_Statics::NewProp_VectorLine = { "VectorLine", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AsistivnaBall_eventSetLineVector_Parms, VectorLine), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AAsistivnaBall_SetLineVector_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AAsistivnaBall_SetLineVector_Statics::NewProp_VectorLine,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AAsistivnaBall_SetLineVector_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Line" },
+		{ "ModuleRelativePath", "AsistivnaBall.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AAsistivnaBall_SetLineVector_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AAsistivnaBall, nullptr, "SetLineVector", nullptr, nullptr, sizeof(AsistivnaBall_eventSetLineVector_Parms), Z_Construct_UFunction_AAsistivnaBall_SetLineVector_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AAsistivnaBall_SetLineVector_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04820401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AAsistivnaBall_SetLineVector_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AAsistivnaBall_SetLineVector_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AAsistivnaBall_SetLineVector()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AAsistivnaBall_SetLineVector_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_AAsistivnaBall_NoRegister()
 	{
 		return AAsistivnaBall::StaticClass();
@@ -234,6 +269,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 		{ &Z_Construct_UFunction_AAsistivnaBall_GetBarCounter, "GetBarCounter" }, // 4292856351
 		{ &Z_Construct_UFunction_AAsistivnaBall_GetBarFaze, "GetBarFaze" }, // 4155991262
 		{ &Z_Construct_UFunction_AAsistivnaBall_GetLineAngleSpeed, "GetLineAngleSpeed" }, // 3385417910
+		{ &Z_Construct_UFunction_AAsistivnaBall_SetLineVector, "SetLineVector" }, // 3505750861
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsistivnaBall_Statics::Class_MetaDataParams[] = {
@@ -433,7 +469,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAsistivnaBall, 2185347050);
+	IMPLEMENT_CLASS(AAsistivnaBall, 3378328518);
 	template<> ASISTIVNA_API UClass* StaticClass<AAsistivnaBall>()
 	{
 		return AAsistivnaBall::StaticClass();

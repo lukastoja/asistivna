@@ -177,7 +177,7 @@ void AAsistivnaBall::SpawnThrow()
 	BallSpawnTransform.SetScale3D(FVector(1.f));
 
 	ABall* ball =  GetWorld()->SpawnActor<ABall>(BallClass, BallSpawnTransform, SpawnParameters);
-	ball->SetUpThrowMethod();
+	ball->SetUpThrowMethod(lineVector);
 }
 
 void AAsistivnaBall::Jump()
@@ -298,4 +298,9 @@ int AAsistivnaBall::GetBarFaze() {
 
 int AAsistivnaBall::GetLineAngleSpeed() {
 	return angleSpeed;
+}
+
+void AAsistivnaBall::SetLineVector(FVector VectorLine)
+{
+	lineVector = VectorLine;
 }

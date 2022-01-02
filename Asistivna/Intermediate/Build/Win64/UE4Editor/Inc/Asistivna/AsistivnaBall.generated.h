@@ -8,6 +8,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+struct FVector;
 #ifdef ASISTIVNA_AsistivnaBall_generated_h
 #error "AsistivnaBall.generated.h already included, missing '#pragma once' in AsistivnaBall.h"
 #endif
@@ -15,6 +16,15 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define Asistivna_Source_Asistivna_AsistivnaBall_h_12_SPARSE_DATA
 #define Asistivna_Source_Asistivna_AsistivnaBall_h_12_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execSetLineVector) \
+	{ \
+		P_GET_STRUCT(FVector,Z_Param_VectorLine); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetLineVector(Z_Param_VectorLine); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execGetLineAngleSpeed) \
 	{ \
@@ -42,6 +52,15 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 
 #define Asistivna_Source_Asistivna_AsistivnaBall_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execSetLineVector) \
+	{ \
+		P_GET_STRUCT(FVector,Z_Param_VectorLine); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetLineVector(Z_Param_VectorLine); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execGetLineAngleSpeed) \
 	{ \

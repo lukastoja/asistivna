@@ -33,13 +33,13 @@ ABall::ABall()
 	t = 0;
 }
 
-void ABall::SetUpThrowMethod()
+void ABall::SetUpThrowMethod(FVector lineVector)
 {
 	t = 0;
 	T = 0;
 	throwFlag = true;
 	pocetna_pozicija = GetActorLocation();
-	IzracunajKrajnjuPoziciju();
+	IzracunajKrajnjuPoziciju(lineVector);
 	flagRT = true;
 }
 
@@ -55,11 +55,11 @@ void ABall::BeginPlay()
 	
 }
 
-void ABall::IzracunajKrajnjuPoziciju()
+void ABall::IzracunajKrajnjuPoziciju(FVector lineVector)
 {
 	float x, y, z;
 	float dist = 2000;
-	FVector direction = GetActorForwardVector();
+	FVector direction = lineVector;
 
 	x = pocetna_pozicija.X + dist * direction.X;
 	y = pocetna_pozicija.Y + dist * direction.Y;
