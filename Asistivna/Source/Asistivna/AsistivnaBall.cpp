@@ -59,8 +59,8 @@ AAsistivnaBall::AAsistivnaBall()
 
 	spawnLocation = 100;
 	BarCounter = 0;
-	BarFaze = 1;
-	brzinaBara = 0.025;
+	BarFaze = 0;
+	brzinaBara = 0.05;
 	barFlag = true;
 
 	LineAngle = 0;
@@ -141,9 +141,23 @@ void AAsistivnaBall::BarRoll()
 	}
 	else if (BarFaze == 1) {
 	}
-	else if (BarFaze == 2) {
+	else if (BarFaze == 3) {
+		FActorSpawnParameters SpawnParameters;
+		SpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+		SpawnParameters.bNoFail = true;
+		SpawnParameters.Owner = this;
+		SpawnParameters.Instigator = this;
+
+		FTransform BallSpawnTransform;
+		FVector new_ball_location = GetActorLocation();
+		new_ball_location.Z = 100;
+		BallSpawnTransform.SetLocation(GetActorForwardVector() * spawnLocation + new_ball_location);
+		BallSpawnTransform.SetRotation(GetActorRotation().Quaternion());
+		BallSpawnTransform.SetScale3D(FVector(1.f));
+
+		ABall* ball = GetWorld()->SpawnActor<ABall>(BallClass, BallSpawnTransform, SpawnParameters);
 		const FVector Torque = FVector(0.f, strength * GetBarCounter() * RollTorque, 0.f);
-		Ball->AddTorqueInRadians(Torque);
+		ball->RollBall(Torque);
 		BarFaze = -3;
 	}
 	++BarFaze;

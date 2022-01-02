@@ -43,6 +43,11 @@ void ABall::SetUpThrowMethod()
 	flagRT = true;
 }
 
+void ABall::RollBall(FVector Torque)
+{
+	Ball->AddTorqueInRadians(Torque);
+}
+
 // Called when the game starts or when spawned
 void ABall::BeginPlay()
 {

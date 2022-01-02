@@ -26,6 +26,8 @@ public:
 	
 	void SetUpThrowMethod();
 
+	void RollBall(FVector Torque);
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
