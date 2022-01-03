@@ -156,7 +156,11 @@ void AAsistivnaBall::BarRoll()
 		BallSpawnTransform.SetScale3D(FVector(1.f));
 
 		ABall* ball = GetWorld()->SpawnActor<ABall>(BallClass, BallSpawnTransform, SpawnParameters);
-		const FVector Torque = FVector(0.f, strength * GetBarCounter() * RollTorque, 0.f);
+		//const FVector Torque = FVector(0.f, strength * GetBarCounter() * RollTorque, 0.f);
+		//ball->SetUpRollMethod(lineVector);
+		FVector Torque = lineVector * strength * GetBarCounter();
+		Torque.Z = 0;
+
 		ball->RollBall(Torque);
 		BarFaze = -3;
 	}
@@ -333,7 +337,7 @@ void AAsistivnaBall::BallRoll() {
 	BallSpawnTransform.SetScale3D(FVector(1.f));
 
 	ABall* ball = GetWorld()->SpawnActor<ABall>(BallClass, BallSpawnTransform, SpawnParameters);
-	const FVector Torque = FVector(0.f, strength * GetBarCounter() * RollTorque, 0.f);
+	const FVector Torque = FVector(strength * GetBarCounter() * RollTorque * (FVector::CrossProduct(FVector(0, 0, 1), lineVector).X), strength * GetBarCounter() * RollTorque * (FVector::CrossProduct(FVector(0, 0, 1), lineVector).Y), 0.f);
 	ball->RollBall(Torque);
 	AfterPlay();
 }

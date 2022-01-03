@@ -25,6 +25,7 @@ public:
 	float strength;
 	
 	void SetUpThrowMethod(FVector lineVector);
+	void SetUpRollMethod(FVector lineVector);
 
 	void RollBall(FVector Torque);
 

@@ -43,6 +43,12 @@ void ABall::SetUpThrowMethod(FVector lineVector)
 	flagRT = true;
 }
 
+void ABall::SetUpRollMethod(FVector lineVector)
+{
+	FRotator rotation = lineVector.Rotation();
+	Ball->SetWorldRotation(rotation);
+}
+
 void ABall::RollBall(FVector Torque)
 {
 	Ball->AddTorqueInRadians(Torque);

@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Asistivna.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{A04C21A4-55AD-440A-B1E6-88F1CFEA79AB}</UniqueIdentifier>
+      <UniqueIdentifier>{667530D2-A325-4AF6-9ED4-0F0365FFA719}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Asistivna.Target.cs">
       <Filter>Source</Filter>
@@ -13,7 +13,7 @@
     </None>
     <None Include="..\..\UpgradeLog.htm" />
     <Filter Include="Config">
-      <UniqueIdentifier>{F1CEE0BF-D13C-4B27-8A10-F1650A93C9A5}</UniqueIdentifier>
+      <UniqueIdentifier>{C1DCBAB8-2F60-43C0-B8CB-3933FEEAE0ED}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -31,7 +31,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Asistivna">
-      <UniqueIdentifier>{4EE0C2EB-7946-4048-ACCB-20953A58FC15}</UniqueIdentifier>
+      <UniqueIdentifier>{13BA8403-7826-47B1-8883-CDFF0A4222CA}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Asistivna\Asistivna.Build.cs">
       <Filter>Source\Asistivna</Filter>
@@ -60,5 +60,15 @@
     <ClInclude Include="..\..\Source\Asistivna\Ball.h">
       <Filter>Source\Asistivna</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\Asistivna\Bullin.h">
+      <Filter>Source\Asistivna</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\Asistivna\Bullin.cpp">
+      <Filter>Source\Asistivna</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
