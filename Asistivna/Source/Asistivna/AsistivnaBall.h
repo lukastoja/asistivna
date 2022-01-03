@@ -93,6 +93,7 @@ protected:
 	void BarRoll();
 
 	void SpawnThrow();
+	void AfterPlay();
 
 	/** Handle jump action. */
 	void Jump();

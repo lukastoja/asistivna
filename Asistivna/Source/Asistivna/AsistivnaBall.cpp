@@ -308,9 +308,14 @@ void AAsistivnaBall::SetLineVector(FVector VectorLine)
 	lineVector = VectorLine;
 }
 
-void AAsistivnaBall::BallThrow() {
-	SpawnThrow();
+void AAsistivnaBall::AfterPlay() {
 	BarFaze = 0;
+	BarCounter = 0;
+}
+
+void AAsistivnaBall::BallThrow() {
+	SpawnThrow();	
+	AfterPlay();
 }
 
 void AAsistivnaBall::BallRoll() {
@@ -330,13 +335,13 @@ void AAsistivnaBall::BallRoll() {
 	ABall* ball = GetWorld()->SpawnActor<ABall>(BallClass, BallSpawnTransform, SpawnParameters);
 	const FVector Torque = FVector(0.f, strength * GetBarCounter() * RollTorque, 0.f);
 	ball->RollBall(Torque);
-	BarFaze = 0;
+	AfterPlay();
 }
 
 void AAsistivnaBall::IncreaseBarFaze() {
-	BarFaze += 1;
+	++BarFaze;
 }
 
 void AAsistivnaBall::DecreaseBarFaze() {
-	BarFaze -= 1;
+	BarFaze > 0 ? --BarFaze : BarFaze = 0;
 }
