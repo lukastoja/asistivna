@@ -77,15 +77,6 @@ void AAsistivnaBall::BeginPlay()
 	UWorld* TheWorld = GetWorld();
 	FString CurrentLevel = TheWorld->GetMapName();
 	CurrentLevel.RemoveFromStart(GetWorld()->StreamingLevelsPrefix);
-	if (CurrentLevel != "MainMenuMap")
-	{
-		CurrentWidget = CreateWidget<UUserWidget>(GetWorld(), MainHUD);
-
-		if (CurrentWidget)
-		{
-			CurrentWidget->AddToViewport();
-		}
-	}
 }
 
 
