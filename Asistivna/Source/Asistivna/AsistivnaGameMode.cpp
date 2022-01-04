@@ -6,6 +6,8 @@
 #include "Engine/World.h"
 #include "Engine.h"
 #include "Blueprint/UserWidget.h"
+#include "Ball.h"
+#include "Bullin.h"
 
 AAsistivnaGameMode::AAsistivnaGameMode()
 {
@@ -41,4 +43,40 @@ void AAsistivnaGameMode::BeginPlay()
 		PC->bEnableClickEvents = true;
 		PC->bEnableMouseOverEvents = true;
 	}
+}
+
+void AAsistivnaGameMode::PronadjiNajblizuLoptu()
+{
+	float dist = 9999999999;
+	AActor* ClosestBall;
+
+	TArray<AActor*> FoundActorsBall;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ABall::StaticClass(), FoundActorsBall);
+
+	TArray<AActor*> FoundActorsBullin;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ABullin::StaticClass(), FoundActorsBullin);
+
+	for (int i = 0; i < FoundActorsBall.Num(); i++)
+	{
+		if (Cast<ABall>(FoundActorsBall[i])->player)
+		{
+			player1.Add(FoundActorsBall[i]);
+		}
+		else {
+			player2.Add(FoundActorsBall[i]);
+		}
+
+		FVector locationBall = FoundActorsBall[i]->GetActorLocation();
+		FVector locationBullin = FoundActorsBullin[0]->GetActorLocation();
+		
+		if (FVector::Dist(locationBall, locationBullin) < dist)
+		{
+			dist = FVector::Dist(locationBall, locationBullin);
+			ClosestBall = FoundActorsBall[i];
+		}
+	}
+
+	//pronaci najblizu loptu od neprijateljskog igraca
+	//vidjeti koliko bliziji player ima loptica blizu bullina odnosno na neprijateljsku najblizu lopticu
+
 }

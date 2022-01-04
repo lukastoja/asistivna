@@ -92,6 +92,8 @@ protected:
 	void Roll();
 	void BarRoll();
 
+	void SveLopte();
+
 	void SpawnThrow();
 	void AfterPlay();
 

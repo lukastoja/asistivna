@@ -31,6 +31,8 @@ ABall::ABall()
 	throwFlag = false;
 	T = 0;
 	t = 0;
+
+	player = true;
 }
 
 void ABall::SetUpThrowMethod(FVector lineVector)
@@ -41,12 +43,6 @@ void ABall::SetUpThrowMethod(FVector lineVector)
 	pocetna_pozicija = GetActorLocation();
 	IzracunajKrajnjuPoziciju(lineVector);
 	flagRT = true;
-}
-
-void ABall::SetUpRollMethod(FVector lineVector)
-{
-	FRotator rotation = lineVector.Rotation();
-	Ball->SetWorldRotation(rotation);
 }
 
 void ABall::RollBall(FVector Torque)
@@ -100,9 +96,5 @@ void ABall::Tick(float DeltaTime)
 			}
 		}
 	} 
-	else
-	{
-		return;
-	}
 }
 

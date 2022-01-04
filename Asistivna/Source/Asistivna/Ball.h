@@ -25,9 +25,10 @@ public:
 	float strength;
 	
 	void SetUpThrowMethod(FVector lineVector);
-	void SetUpRollMethod(FVector lineVector);
 
 	void RollBall(FVector Torque);
+
+	bool player;
 
 protected:
 	// Called when the game starts or when spawned

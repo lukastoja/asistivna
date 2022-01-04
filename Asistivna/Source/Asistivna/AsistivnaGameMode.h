@@ -21,6 +21,11 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "MainHud")
 	class UUserWidget* CurrentWidget;
+
+	void PronadjiNajblizuLoptu();
+
+	TArray<AActor*> player1;
+	TArray<AActor*> player2;
 };
 
 

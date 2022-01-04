@@ -12,6 +12,7 @@
 #include "Engine/World.h"
 #include "Engine.h"
 #include "Blueprint/UserWidget.h"
+#include "AsistivnaGameMode.h"
 
 AAsistivnaBall::AAsistivnaBall()
 {
@@ -92,6 +93,8 @@ void AAsistivnaBall::SetupPlayerInputComponent(class UInputComponent* PlayerInpu
 	PlayerInputComponent->BindAction("BarRoll", IE_Pressed, this, &AAsistivnaBall::BarRoll);
 	PlayerInputComponent->BindAction("SpawnThrow", IE_Pressed, this, &AAsistivnaBall::SpawnThrow);
 
+	PlayerInputComponent->BindAction("SveLopte", IE_Pressed, this, &AAsistivnaBall::SveLopte);
+
 	// handle touch devices
 	PlayerInputComponent->BindTouch(IE_Pressed, this, &AAsistivnaBall::TouchStarted);
 	PlayerInputComponent->BindTouch(IE_Released, this, &AAsistivnaBall::TouchStopped);
@@ -156,6 +159,12 @@ void AAsistivnaBall::BarRoll()
 		BarFaze = -3;
 	}
 	++BarFaze;
+}
+
+void AAsistivnaBall::SveLopte()
+{
+	AAsistivnaGameMode* GM = (AAsistivnaGameMode*)GetWorld()->GetAuthGameMode();
+	GM->PronadjiNajblizuLoptu();
 }
 
 void AAsistivnaBall::SpawnThrow()
