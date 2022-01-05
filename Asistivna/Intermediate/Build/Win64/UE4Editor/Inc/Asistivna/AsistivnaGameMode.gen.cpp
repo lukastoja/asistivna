@@ -17,11 +17,85 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 	ASISTIVNA_API UClass* Z_Construct_UClass_AAsistivnaGameMode();
 	ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
 	UPackage* Z_Construct_UPackage__Script_Asistivna();
+	ASISTIVNA_API UFunction* Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP1();
+	ASISTIVNA_API UFunction* Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP2();
 	UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 // End Cross Module References
 	void AAsistivnaGameMode::StaticRegisterNativesAAsistivnaGameMode()
 	{
+		UClass* Class = AAsistivnaGameMode::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "GetScoreP1", &AAsistivnaGameMode::execGetScoreP1 },
+			{ "GetScoreP2", &AAsistivnaGameMode::execGetScoreP2 },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP1_Statics
+	{
+		struct AsistivnaGameMode_eventGetScoreP1_Parms
+		{
+			int32 ReturnValue;
+		};
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP1_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AsistivnaGameMode_eventGetScoreP1_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP1_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP1_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP1_Statics::Function_MetaDataParams[] = {
+		{ "Category", "score" },
+		{ "ModuleRelativePath", "AsistivnaGameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP1_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AAsistivnaGameMode, nullptr, "GetScoreP1", nullptr, nullptr, sizeof(AsistivnaGameMode_eventGetScoreP1_Parms), Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP1_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP1_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP1_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP1_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP1()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP1_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP2_Statics
+	{
+		struct AsistivnaGameMode_eventGetScoreP2_Parms
+		{
+			int32 ReturnValue;
+		};
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP2_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AsistivnaGameMode_eventGetScoreP2_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP2_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP2_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP2_Statics::Function_MetaDataParams[] = {
+		{ "Category", "score" },
+		{ "ModuleRelativePath", "AsistivnaGameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP2_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AAsistivnaGameMode, nullptr, "GetScoreP2", nullptr, nullptr, sizeof(AsistivnaGameMode_eventGetScoreP2_Parms), Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP2_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP2_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP2_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP2_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP2()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP2_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_AAsistivnaGameMode_NoRegister()
 	{
@@ -30,6 +104,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 	struct Z_Construct_UClass_AAsistivnaGameMode_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -48,6 +123,10 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 	UObject* (*const Z_Construct_UClass_AAsistivnaGameMode_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_AGameModeBase,
 		(UObject* (*)())Z_Construct_UPackage__Script_Asistivna,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_AAsistivnaGameMode_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP1, "GetScoreP1" }, // 473288904
+		{ &Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP2, "GetScoreP2" }, // 3155478386
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsistivnaGameMode_Statics::Class_MetaDataParams[] = {
@@ -85,11 +164,11 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_AAsistivnaGameMode_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_AAsistivnaGameMode_Statics::PropPointers),
 		0,
 		0x008802ACu,
@@ -104,7 +183,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAsistivnaGameMode, 3853918719);
+	IMPLEMENT_CLASS(AAsistivnaGameMode, 2341108509);
 	template<> ASISTIVNA_API UClass* StaticClass<AAsistivnaGameMode>()
 	{
 		return AAsistivnaGameMode::StaticClass();

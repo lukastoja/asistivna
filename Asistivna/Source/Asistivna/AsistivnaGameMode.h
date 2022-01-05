@@ -26,6 +26,15 @@ public:
 
 	TArray<AActor*> player1;
 	TArray<AActor*> player2;
+
+	UFUNCTION(BlueprintPure, Category = "score")
+	int GetScoreP1();
+
+	UFUNCTION(BlueprintPure, Category = "score")
+	int GetScoreP2();
+
+	int scorep1;
+	int scorep2;
 };
 
 

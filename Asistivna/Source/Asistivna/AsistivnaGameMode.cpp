@@ -16,6 +16,9 @@ AAsistivnaGameMode::AAsistivnaGameMode()
 
 	static ConstructorHelpers::FClassFinder<UUserWidget> MainHudClass(TEXT("/Game/Blueprints/widgets/MainMenuWidget"));
 	MainHUD = MainHudClass.Class;
+
+	scorep1 = 0;
+	scorep2 = 0;
 }
 
 void AAsistivnaGameMode::BeginPlay()
@@ -43,12 +46,19 @@ void AAsistivnaGameMode::BeginPlay()
 		PC->bEnableClickEvents = true;
 		PC->bEnableMouseOverEvents = true;
 	}
+
+	scorep1 = 0;
+	scorep2 = 0;
 }
 
 void AAsistivnaGameMode::PronadjiNajblizuLoptu()
 {
 	float dist = 9999999999;
-	AActor* ClosestBall;
+	float distE = 9999999999;
+	AActor* ClosestBall = nullptr;
+	AActor* nepBall;
+	player2.Empty();
+	player1.Empty();
 
 	TArray<AActor*> FoundActorsBall;
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ABall::StaticClass(), FoundActorsBall);
@@ -76,7 +86,67 @@ void AAsistivnaGameMode::PronadjiNajblizuLoptu()
 		}
 	}
 
+
 	//pronaci najblizu loptu od neprijateljskog igraca
 	//vidjeti koliko bliziji player ima loptica blizu bullina odnosno na neprijateljsku najblizu lopticu
+	if (ClosestBall != nullptr && Cast<ABall>(ClosestBall)->player)
+	{
+		for (int i = 0; i < player2.Num(); i++)
+		{
+			FVector locationBall = player2[i]->GetActorLocation();
+			FVector locationBullin = FoundActorsBullin[0]->GetActorLocation();
 
+			if (FVector::Dist(locationBall, locationBullin) < distE)
+			{
+				distE = FVector::Dist(locationBall, locationBullin);
+				nepBall = player2[i];
+			}
+		}
+
+		for (int i = 0; i < player1.Num(); i++)
+		{
+			FVector locationBall = player1[i]->GetActorLocation();
+			FVector locationBullin = FoundActorsBullin[0]->GetActorLocation();
+
+			if (FVector::Dist(locationBall, locationBullin) < distE)
+			{
+				scorep1++;
+			}
+		}
+	}
+	else
+	{
+		for (int i = 0; i < player1.Num(); i++)
+		{
+			FVector locationBall = player1[i]->GetActorLocation();
+			FVector locationBullin = FoundActorsBullin[0]->GetActorLocation();
+
+			if (FVector::Dist(locationBall, locationBullin) < distE)
+			{
+				distE = FVector::Dist(locationBall, locationBullin);
+				nepBall = player1[i];
+			}
+		}
+
+		for (int i = 0; i < player2.Num(); i++)
+		{
+			FVector locationBall = player2[i]->GetActorLocation();
+			FVector locationBullin = FoundActorsBullin[0]->GetActorLocation();
+
+			if (FVector::Dist(locationBall, locationBullin) < distE)
+			{
+				scorep2++;
+			}
+		}
+	}
+}
+
+int AAsistivnaGameMode::GetScoreP1()
+{
+	return scorep1;
+}
+
+int AAsistivnaGameMode::GetScoreP2()
+{
+	return scorep2;
 }

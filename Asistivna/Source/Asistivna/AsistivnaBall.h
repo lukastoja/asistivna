@@ -32,6 +32,9 @@ public:
 	UPROPERTY(EditAnywhere, Category="Ball")
 	float JumpImpulse;
 
+	UPROPERTY(EditAnywhere, Category = "player")
+	bool player;
+
 	/** Bar counter*/
 	UPROPERTY(EditAnywhere, Category = "Bar")
 	float BarCounter;

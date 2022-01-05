@@ -27,6 +27,9 @@ ABall::ABall()
 	Ball->SetNotifyRigidBodyCollision(true);
 	RootComponent = Ball;
 
+	MaterialBallP1 = CreateDefaultSubobject<UMaterial>("MaterialBallP1");
+	MaterialBallP2 = CreateDefaultSubobject<UMaterial>("MaterialBallP2");
+
 	flagRT = false;
 	throwFlag = false;
 	T = 0;
@@ -96,5 +99,17 @@ void ABall::Tick(float DeltaTime)
 			}
 		}
 	} 
+}
+
+void ABall::SetUpPlayer(bool p)
+{
+	player = p;
+	if (player)
+	{
+		Ball->SetMaterial(0, MaterialBallP1);
+	}
+	else {
+		Ball->SetMaterial(0, MaterialBallP2);
+	}
 }
 

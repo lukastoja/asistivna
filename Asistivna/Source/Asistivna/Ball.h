@@ -18,6 +18,12 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Ball, meta = (AllowPrivateAccess = "true"))
 	class UStaticMeshComponent* Ball;
 
+	UPROPERTY(EditAnywhere, Category = "Material")
+	class UMaterial* MaterialBallP1;
+
+	UPROPERTY(EditAnywhere, Category = "Material")
+	class UMaterial* MaterialBallP2;
+
 	//flag za odredivanej ce se lopta rollat ili bacat
 	bool flagRT;
 
@@ -28,6 +34,7 @@ public:
 
 	void RollBall(FVector Torque);
 
+	UPROPERTY(EditAnywhere, Category = "player")
 	bool player;
 
 protected:
@@ -47,4 +54,6 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	FORCEINLINE class UStaticMeshComponent* GetBall() const { return Ball; }
+
+	void SetUpPlayer(bool p);
 };

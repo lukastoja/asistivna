@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeBall() {}
 	ASISTIVNA_API UClass* Z_Construct_UClass_ABall();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_Asistivna();
+	ENGINE_API UClass* Z_Construct_UClass_UMaterial_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 // End Cross Module References
 	void ABall::StaticRegisterNativesABall()
@@ -33,9 +34,22 @@ void EmptyLinkFunctionForGeneratedCodeBall() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_player_MetaData[];
+#endif
+		static void NewProp_player_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_player;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_strength_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_strength;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaterialBallP2_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MaterialBallP2;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaterialBallP1_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MaterialBallP1;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Ball_MetaData[];
 #endif
@@ -55,12 +69,37 @@ void EmptyLinkFunctionForGeneratedCodeBall() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABall_Statics::NewProp_player_MetaData[] = {
+		{ "Category", "player" },
+		{ "ModuleRelativePath", "Ball.h" },
+	};
+#endif
+	void Z_Construct_UClass_ABall_Statics::NewProp_player_SetBit(void* Obj)
+	{
+		((ABall*)Obj)->player = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ABall_Statics::NewProp_player = { "player", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ABall), &Z_Construct_UClass_ABall_Statics::NewProp_player_SetBit, METADATA_PARAMS(Z_Construct_UClass_ABall_Statics::NewProp_player_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABall_Statics::NewProp_player_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABall_Statics::NewProp_strength_MetaData[] = {
 		{ "Category", "Movement" },
 		{ "ModuleRelativePath", "Ball.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABall_Statics::NewProp_strength = { "strength", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABall, strength), METADATA_PARAMS(Z_Construct_UClass_ABall_Statics::NewProp_strength_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABall_Statics::NewProp_strength_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABall_Statics::NewProp_MaterialBallP2_MetaData[] = {
+		{ "Category", "Material" },
+		{ "ModuleRelativePath", "Ball.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABall_Statics::NewProp_MaterialBallP2 = { "MaterialBallP2", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABall, MaterialBallP2), Z_Construct_UClass_UMaterial_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABall_Statics::NewProp_MaterialBallP2_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABall_Statics::NewProp_MaterialBallP2_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABall_Statics::NewProp_MaterialBallP1_MetaData[] = {
+		{ "Category", "Material" },
+		{ "ModuleRelativePath", "Ball.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABall_Statics::NewProp_MaterialBallP1 = { "MaterialBallP1", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABall, MaterialBallP1), Z_Construct_UClass_UMaterial_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABall_Statics::NewProp_MaterialBallP1_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABall_Statics::NewProp_MaterialBallP1_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABall_Statics::NewProp_Ball_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -71,7 +110,10 @@ void EmptyLinkFunctionForGeneratedCodeBall() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABall_Statics::NewProp_Ball = { "Ball", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABall, Ball), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABall_Statics::NewProp_Ball_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABall_Statics::NewProp_Ball_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABall_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABall_Statics::NewProp_player,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABall_Statics::NewProp_strength,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABall_Statics::NewProp_MaterialBallP2,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABall_Statics::NewProp_MaterialBallP1,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABall_Statics::NewProp_Ball,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ABall_Statics::StaticCppClassTypeInfo = {
@@ -101,7 +143,7 @@ void EmptyLinkFunctionForGeneratedCodeBall() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABall, 1253603288);
+	IMPLEMENT_CLASS(ABall, 2445954849);
 	template<> ASISTIVNA_API UClass* StaticClass<ABall>()
 	{
 		return ABall::StaticClass();

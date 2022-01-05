@@ -69,6 +69,7 @@ AAsistivnaBall::AAsistivnaBall()
 
 	polovica_duljine = 250;
 	duljina = 500;
+	player = true;
 }
 
 void AAsistivnaBall::BeginPlay()
@@ -184,6 +185,7 @@ void AAsistivnaBall::SpawnThrow()
 
 	ABall* ball =  GetWorld()->SpawnActor<ABall>(BallClass, BallSpawnTransform, SpawnParameters);
 	ball->SetUpThrowMethod(lineVector);
+	ball->SetUpPlayer(player);
 }
 
 void AAsistivnaBall::Jump()
@@ -337,6 +339,7 @@ void AAsistivnaBall::BallRoll() {
 	BallSpawnTransform.SetScale3D(FVector(1.f));
 
 	ABall* ball = GetWorld()->SpawnActor<ABall>(BallClass, BallSpawnTransform, SpawnParameters);
+	ball->SetUpPlayer(player);
 	const FVector Torque = FVector(strength * GetBarCounter() * RollTorque * (FVector::CrossProduct(FVector(0, 0, 1), lineVector).X), strength * GetBarCounter() * RollTorque * (FVector::CrossProduct(FVector(0, 0, 1), lineVector).Y), 0.f);
 	ball->RollBall(Torque);
 	AfterPlay();

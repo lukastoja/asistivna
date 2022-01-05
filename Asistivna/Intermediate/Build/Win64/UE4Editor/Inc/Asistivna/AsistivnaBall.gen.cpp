@@ -342,6 +342,11 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BarCounter;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_player_MetaData[];
+#endif
+		static void NewProp_player_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_player;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_JumpImpulse_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_JumpImpulse;
@@ -486,6 +491,17 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_BarCounter = { "BarCounter", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAsistivnaBall, BarCounter), METADATA_PARAMS(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_BarCounter_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_BarCounter_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_player_MetaData[] = {
+		{ "Category", "player" },
+		{ "ModuleRelativePath", "AsistivnaBall.h" },
+	};
+#endif
+	void Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_player_SetBit(void* Obj)
+	{
+		((AAsistivnaBall*)Obj)->player = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_player = { "player", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AAsistivnaBall), &Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_player_SetBit, METADATA_PARAMS(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_player_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_player_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_JumpImpulse_MetaData[] = {
 		{ "Category", "Ball" },
 		{ "Comment", "/** Vertical impulse to apply when pressing jump */" },
@@ -541,6 +557,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_BallLocation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_BarFaze,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_BarCounter,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_player,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_JumpImpulse,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_Camera,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_SpringArm,
@@ -573,7 +590,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAsistivnaBall, 2096314702);
+	IMPLEMENT_CLASS(AAsistivnaBall, 2409867869);
 	template<> ASISTIVNA_API UClass* StaticClass<AAsistivnaBall>()
 	{
 		return AAsistivnaBall::StaticClass();
