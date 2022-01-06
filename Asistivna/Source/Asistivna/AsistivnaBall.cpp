@@ -70,6 +70,9 @@ AAsistivnaBall::AAsistivnaBall()
 	polovica_duljine = 250;
 	duljina = 500;
 	player = true;
+
+	brLopti1 = 6;
+	brLopti2 = 6;
 }
 
 void AAsistivnaBall::BeginPlay()
@@ -317,11 +320,18 @@ void AAsistivnaBall::SetLineVector(FVector VectorLine)
 void AAsistivnaBall::AfterPlay() {
 	BarFaze = 0;
 	BarCounter = 0;
+
+	if (player) {
+		--brLopti1;
+	}
+	else {
+		--brLopti2;
+	}
 }
 
 void AAsistivnaBall::BallThrow() {
-	SpawnThrow();	
 	AfterPlay();
+	SpawnThrow();	
 }
 
 void AAsistivnaBall::BallRoll() {

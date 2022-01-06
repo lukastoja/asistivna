@@ -19,6 +19,10 @@ AAsistivnaGameMode::AAsistivnaGameMode()
 
 	scorep1 = 0;
 	scorep2 = 0;
+	finalScorep1 = 0;
+	finalScorep2 = 0;
+
+	roundOver = false;
 }
 
 void AAsistivnaGameMode::BeginPlay()

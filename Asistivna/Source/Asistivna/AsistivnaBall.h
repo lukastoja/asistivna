@@ -82,6 +82,11 @@ public:
 	UPROPERTY(EditAnywhere, Category = "MainHud")
 	class UUserWidget* CurrentWidget;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "brLopti")
+	int brLopti1;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "brLopti")
+	int brLopti2;
+
 protected:
 
 	/** Called for side to side input */

@@ -374,6 +374,14 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 #endif
 		static const UE4CodeGen_Private::FClassPropertyParams NewProp_BallClass;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_brLopti2_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_brLopti2;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_brLopti1_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_brLopti1;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentWidget_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CurrentWidget;
@@ -476,6 +484,20 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 	};
 #endif
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_BallClass = { "BallClass", nullptr, (EPropertyFlags)0x0024080000000001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAsistivnaBall, BallClass), Z_Construct_UClass_ABall_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_BallClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_BallClass_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_brLopti2_MetaData[] = {
+		{ "Category", "brLopti" },
+		{ "ModuleRelativePath", "AsistivnaBall.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_brLopti2 = { "brLopti2", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAsistivnaBall, brLopti2), METADATA_PARAMS(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_brLopti2_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_brLopti2_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_brLopti1_MetaData[] = {
+		{ "Category", "brLopti" },
+		{ "ModuleRelativePath", "AsistivnaBall.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_brLopti1 = { "brLopti1", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAsistivnaBall, brLopti1), METADATA_PARAMS(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_brLopti1_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_brLopti1_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_CurrentWidget_MetaData[] = {
 		{ "Category", "MainHud" },
@@ -627,6 +649,8 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_Ball = { "Ball", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAsistivnaBall, Ball), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_Ball_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_Ball_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AAsistivnaBall_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_BallClass,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_brLopti2,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_brLopti1,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_CurrentWidget,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_MainHUD,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_spawnLocation,
@@ -672,7 +696,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAsistivnaBall, 520651947);
+	IMPLEMENT_CLASS(AAsistivnaBall, 4201022869);
 	template<> ASISTIVNA_API UClass* StaticClass<AAsistivnaBall>()
 	{
 		return AAsistivnaBall::StaticClass();

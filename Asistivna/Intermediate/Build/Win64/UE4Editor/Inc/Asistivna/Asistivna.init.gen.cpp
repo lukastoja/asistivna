@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivna_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xB3502B2E,
+				0x87980D7B,
 				0x4074A895,
 				METADATA_PARAMS(nullptr, 0)
 			};

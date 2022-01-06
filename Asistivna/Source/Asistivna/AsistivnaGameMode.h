@@ -36,6 +36,14 @@ public:
 
 	int scorep1;
 	int scorep2;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "finalscore")
+	int finalScorep1;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "finalscore")
+	int finalScorep2;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "finalscore")
+	bool roundOver;
 };
 
 
