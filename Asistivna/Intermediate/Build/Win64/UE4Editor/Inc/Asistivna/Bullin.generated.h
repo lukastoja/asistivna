@@ -14,8 +14,28 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define ASISTIVNA_Bullin_generated_h
 
 #define Asistivna_Source_Asistivna_Bullin_h_12_SPARSE_DATA
-#define Asistivna_Source_Asistivna_Bullin_h_12_RPC_WRAPPERS
-#define Asistivna_Source_Asistivna_Bullin_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define Asistivna_Source_Asistivna_Bullin_h_12_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execDestroyBullin) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->DestroyBullin(); \
+		P_NATIVE_END; \
+	}
+
+
+#define Asistivna_Source_Asistivna_Bullin_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execDestroyBullin) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->DestroyBullin(); \
+		P_NATIVE_END; \
+	}
+
+
 #define Asistivna_Source_Asistivna_Bullin_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABullin(); \

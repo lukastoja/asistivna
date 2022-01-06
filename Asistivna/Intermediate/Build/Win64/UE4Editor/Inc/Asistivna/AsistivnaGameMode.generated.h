@@ -32,6 +32,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 		P_NATIVE_END; \
 	} \
  \
+	DECLARE_FUNCTION(execPobrisiLopte) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->PobrisiLopte(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execPronadjiNajblizuLoptu) \
 	{ \
 		P_FINISH; \
@@ -56,6 +64,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		*(int32*)Z_Param__Result=P_THIS->GetScoreP1(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execPobrisiLopte) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->PobrisiLopte(); \
 		P_NATIVE_END; \
 	} \
  \

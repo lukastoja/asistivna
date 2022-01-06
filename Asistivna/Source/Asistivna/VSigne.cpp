@@ -8,6 +8,7 @@
 #include "Components/BoxComponent.h"
 #include "Engine.h"
 #include "Components/SceneComponent.h"
+#include "Bullin.h"
 
 // Sets default values
 AVSigne::AVSigne()
@@ -48,4 +49,8 @@ void AVSigne::Tick(float DeltaTime)
 
 void AVSigne::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
+	if (Cast<ABullin>(OtherComp) != nullptr)
+	{
+		Cast<ABullin>(OtherComp)->presaoV = true;
+	}
 }

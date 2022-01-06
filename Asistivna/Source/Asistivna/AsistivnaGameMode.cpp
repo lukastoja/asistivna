@@ -147,6 +147,22 @@ void AAsistivnaGameMode::PronadjiNajblizuLoptu()
 	}
 }
 
+void AAsistivnaGameMode::PobrisiLopte()
+{
+	TArray<AActor*> FoundActorsBall;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ABall::StaticClass(), FoundActorsBall);
+
+	TArray<AActor*> FoundActorsBullin;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ABullin::StaticClass(), FoundActorsBullin);
+
+	for (int i = 0; i < FoundActorsBall.Num(); i++)
+	{
+		FoundActorsBall[i]->Destroy();
+	}
+	
+	FoundActorsBullin[0]->Destroy();
+}
+
 int AAsistivnaGameMode::GetScoreP1()
 {
 	return scorep1;

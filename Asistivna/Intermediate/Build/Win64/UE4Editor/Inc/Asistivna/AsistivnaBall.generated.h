@@ -42,6 +42,14 @@ struct FVector;
 		P_NATIVE_END; \
 	} \
  \
+	DECLARE_FUNCTION(execBullinRoll) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->BullinRoll(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execBallRoll) \
 	{ \
 		P_FINISH; \
@@ -124,6 +132,14 @@ struct FVector;
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->BallThrow(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execBullinRoll) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->BullinRoll(); \
 		P_NATIVE_END; \
 	} \
  \
@@ -231,7 +247,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AAsistivnaBall); \
 	FORCEINLINE static uint32 __PPO__Ball() { return STRUCT_OFFSET(AAsistivnaBall, Ball); } \
 	FORCEINLINE static uint32 __PPO__SpringArm() { return STRUCT_OFFSET(AAsistivnaBall, SpringArm); } \
 	FORCEINLINE static uint32 __PPO__Camera() { return STRUCT_OFFSET(AAsistivnaBall, Camera); } \
-	FORCEINLINE static uint32 __PPO__BallClass() { return STRUCT_OFFSET(AAsistivnaBall, BallClass); }
+	FORCEINLINE static uint32 __PPO__BallClass() { return STRUCT_OFFSET(AAsistivnaBall, BallClass); } \
+	FORCEINLINE static uint32 __PPO__BullinClass() { return STRUCT_OFFSET(AAsistivnaBall, BullinClass); }
 
 
 #define Asistivna_Source_Asistivna_AsistivnaBall_h_9_PROLOG

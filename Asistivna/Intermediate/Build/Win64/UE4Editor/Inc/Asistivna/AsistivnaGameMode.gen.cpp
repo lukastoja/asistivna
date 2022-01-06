@@ -19,6 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 	UPackage* Z_Construct_UPackage__Script_Asistivna();
 	ASISTIVNA_API UFunction* Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP1();
 	ASISTIVNA_API UFunction* Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP2();
+	ASISTIVNA_API UFunction* Z_Construct_UFunction_AAsistivnaGameMode_PobrisiLopte();
 	ASISTIVNA_API UFunction* Z_Construct_UFunction_AAsistivnaGameMode_PronadjiNajblizuLoptu();
 	UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
@@ -29,6 +30,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "GetScoreP1", &AAsistivnaGameMode::execGetScoreP1 },
 			{ "GetScoreP2", &AAsistivnaGameMode::execGetScoreP2 },
+			{ "PobrisiLopte", &AAsistivnaGameMode::execPobrisiLopte },
 			{ "PronadjiNajblizuLoptu", &AAsistivnaGameMode::execPronadjiNajblizuLoptu },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -99,6 +101,29 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AAsistivnaGameMode_PobrisiLopte_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AAsistivnaGameMode_PobrisiLopte_Statics::Function_MetaDataParams[] = {
+		{ "Category", "ResetMap" },
+		{ "ModuleRelativePath", "AsistivnaGameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AAsistivnaGameMode_PobrisiLopte_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AAsistivnaGameMode, nullptr, "PobrisiLopte", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AAsistivnaGameMode_PobrisiLopte_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AAsistivnaGameMode_PobrisiLopte_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AAsistivnaGameMode_PobrisiLopte()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AAsistivnaGameMode_PobrisiLopte_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_AAsistivnaGameMode_PronadjiNajblizuLoptu_Statics
 	{
 #if WITH_METADATA
@@ -165,6 +190,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_AAsistivnaGameMode_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP1, "GetScoreP1" }, // 473288904
 		{ &Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP2, "GetScoreP2" }, // 3155478386
+		{ &Z_Construct_UFunction_AAsistivnaGameMode_PobrisiLopte, "PobrisiLopte" }, // 220965326
 		{ &Z_Construct_UFunction_AAsistivnaGameMode_PronadjiNajblizuLoptu, "PronadjiNajblizuLoptu" }, // 954560639
 	};
 #if WITH_METADATA
@@ -250,7 +276,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAsistivnaGameMode, 1027951676);
+	IMPLEMENT_CLASS(AAsistivnaGameMode, 1894034489);
 	template<> ASISTIVNA_API UClass* StaticClass<AAsistivnaGameMode>()
 	{
 		return AAsistivnaGameMode::StaticClass();

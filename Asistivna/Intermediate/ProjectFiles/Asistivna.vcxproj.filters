@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Asistivna.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{2C90F903-1CD4-4207-9B22-EB454AB86D74}</UniqueIdentifier>
+      <UniqueIdentifier>{8FD792F0-102A-4BB7-B103-696E6F1F48C8}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Asistivna.Target.cs">
       <Filter>Source</Filter>
@@ -13,7 +13,7 @@
     </None>
     <None Include="..\..\UpgradeLog.htm" />
     <Filter Include="Config">
-      <UniqueIdentifier>{9BD0E04A-AF65-434E-851E-06A7A6DE8423}</UniqueIdentifier>
+      <UniqueIdentifier>{28D13714-6CAA-495A-A8CC-77B0C2EBE916}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -31,7 +31,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Asistivna">
-      <UniqueIdentifier>{2D10A15D-5E29-406A-BB9A-ADC8A7C59C75}</UniqueIdentifier>
+      <UniqueIdentifier>{680CBFF7-466A-404F-A3E6-FB3BEFE3E70A}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Asistivna\Asistivna.Build.cs">
       <Filter>Source\Asistivna</Filter>

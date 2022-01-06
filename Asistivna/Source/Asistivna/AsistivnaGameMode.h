@@ -25,6 +25,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "BallDistance")
 	void PronadjiNajblizuLoptu();
 
+	UFUNCTION(BlueprintCallable, Category = "ResetMap")
+	void PobrisiLopte();
+
 	TArray<AActor*> player1;
 	TArray<AActor*> player2;
 

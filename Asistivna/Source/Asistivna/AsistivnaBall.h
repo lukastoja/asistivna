@@ -101,6 +101,7 @@ protected:
 	void BarRoll();
 
 	void SveLopte();
+	void ResetMap();
 
 	void SpawnThrow();
 	void AfterPlay();
@@ -136,6 +137,9 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "BallClass")
 	TSubclassOf<class ABall> BallClass;	
 
+	UPROPERTY(EditAnywhere, Category = "BullinClass")
+	TSubclassOf<class ABullin> BullinClass;
+
 public:
 	/** Returns Ball subobject **/
 	FORCEINLINE class UStaticMeshComponent* GetBall() const { return Ball; }
@@ -165,6 +169,9 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "BallRoll")
 	void BallRoll();
+
+	UFUNCTION(BlueprintCallable, Category = "BullinRoll")
+	void BullinRoll();
 
 	UFUNCTION(BlueprintCallable, Category = "BallThrow")
 	void BallThrow();

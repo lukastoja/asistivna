@@ -13,6 +13,7 @@
 #include "Engine.h"
 #include "Blueprint/UserWidget.h"
 #include "AsistivnaGameMode.h"
+#include "Bullin.h"
 
 AAsistivnaBall::AAsistivnaBall()
 {
@@ -98,6 +99,8 @@ void AAsistivnaBall::SetupPlayerInputComponent(class UInputComponent* PlayerInpu
 	PlayerInputComponent->BindAction("SpawnThrow", IE_Pressed, this, &AAsistivnaBall::SpawnThrow);
 
 	PlayerInputComponent->BindAction("SveLopte", IE_Pressed, this, &AAsistivnaBall::SveLopte);
+	PlayerInputComponent->BindAction("ResetMap", IE_Pressed, this, &AAsistivnaBall::ResetMap);
+	PlayerInputComponent->BindAction("BullinRoll", IE_Pressed, this, &AAsistivnaBall::BullinRoll);
 
 	// handle touch devices
 	PlayerInputComponent->BindTouch(IE_Pressed, this, &AAsistivnaBall::TouchStarted);
@@ -118,8 +121,6 @@ void AAsistivnaBall::MoveForward(float Val)
 
 void AAsistivnaBall::Throw()
 {
-	//bacanje loptice po zraku
-	//zasada ce biti parabola
 	t = 0;
 	T = 0;
 	throwFlag = true;
@@ -154,8 +155,6 @@ void AAsistivnaBall::BarRoll()
 		BallSpawnTransform.SetScale3D(FVector(1.f));
 
 		ABall* ball = GetWorld()->SpawnActor<ABall>(BallClass, BallSpawnTransform, SpawnParameters);
-		//const FVector Torque = FVector(0.f, strength * GetBarCounter() * RollTorque, 0.f);
-		//ball->SetUpRollMethod(lineVector);
 		FVector Torque = lineVector * strength * GetBarCounter();
 		Torque.Z = 0;
 
@@ -169,6 +168,12 @@ void AAsistivnaBall::SveLopte()
 {
 	AAsistivnaGameMode* GM = (AAsistivnaGameMode*)GetWorld()->GetAuthGameMode();
 	GM->PronadjiNajblizuLoptu();
+}
+
+void AAsistivnaBall::ResetMap()
+{
+	AAsistivnaGameMode* GM = (AAsistivnaGameMode*)GetWorld()->GetAuthGameMode();
+	GM->PobrisiLopte();
 }
 
 void AAsistivnaBall::SpawnThrow()
@@ -352,6 +357,26 @@ void AAsistivnaBall::BallRoll() {
 	ball->SetUpPlayer(player);
 	const FVector Torque = FVector(strength * GetBarCounter() * RollTorque * (FVector::CrossProduct(FVector(0, 0, 1), lineVector).X), strength * GetBarCounter() * RollTorque * (FVector::CrossProduct(FVector(0, 0, 1), lineVector).Y), 0.f);
 	ball->RollBall(Torque);
+	AfterPlay();
+}
+
+void AAsistivnaBall::BullinRoll() {
+	FActorSpawnParameters SpawnParameters;
+	SpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+	SpawnParameters.bNoFail = true;
+	SpawnParameters.Owner = this;
+	SpawnParameters.Instigator = this;
+
+	FTransform BallSpawnTransform;
+	FVector new_ball_location = GetActorLocation();
+	new_ball_location.Z = 100;
+	BallSpawnTransform.SetLocation(GetActorForwardVector() * spawnLocation + new_ball_location);
+	BallSpawnTransform.SetRotation(GetActorRotation().Quaternion());
+	BallSpawnTransform.SetScale3D(FVector(1.f));
+
+	ABullin* bullin = GetWorld()->SpawnActor<ABullin>(BullinClass, BallSpawnTransform, SpawnParameters);
+	const FVector Torque = FVector(strength * GetBarCounter() * RollTorque * (FVector::CrossProduct(FVector(0, 0, 1), lineVector).X), strength * GetBarCounter() * RollTorque * (FVector::CrossProduct(FVector(0, 0, 1), lineVector).Y), 0.f);
+	bullin->RollBall(Torque);
 	AfterPlay();
 }
 

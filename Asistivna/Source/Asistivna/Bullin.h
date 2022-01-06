@@ -20,6 +20,15 @@ public:
 
 	void RollBall(FVector Torque);
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
+	bool presaoV;
+
+	UFUNCTION()
+	void DestroyBullin();
+
+	UPROPERTY(EditAnywhere, Category = "Components")
+	FTimerHandle DestroyHandle;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

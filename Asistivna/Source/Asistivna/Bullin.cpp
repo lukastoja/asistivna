@@ -26,6 +26,7 @@ ABullin::ABullin()
 	Bullin->BodyInstance.MaxAngularVelocity = 800.0f;
 	Bullin->SetNotifyRigidBodyCollision(true);
 	RootComponent = Bullin;
+	presaoV = false;
 }
 
 void ABullin::RollBall(FVector Torque)
@@ -33,11 +34,27 @@ void ABullin::RollBall(FVector Torque)
 	Bullin->AddTorqueInRadians(Torque);
 }
 
+void ABullin::DestroyBullin()
+{
+	if (DestroyHandle.IsValid())
+	{
+		//GetWorldTimerManager().ClearTimer(DestroyHandle);
+		GetWorld()->GetTimerManager().ClearTimer(DestroyHandle);
+	}
+
+	if (!presaoV)
+	{
+		this->Destroy();
+	}
+}
+
 // Called when the game starts or when spawned
 void ABullin::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	presaoV = false;
+
+	GetWorld()->GetTimerManager().SetTimer(DestroyHandle, this, &ABullin::DestroyBullin, 5.f, true);
 }
 
 // Called every frame
