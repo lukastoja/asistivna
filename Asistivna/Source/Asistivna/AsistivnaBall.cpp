@@ -352,3 +352,11 @@ void AAsistivnaBall::IncreaseBarFaze() {
 void AAsistivnaBall::DecreaseBarFaze() {
 	BarFaze > 0 ? --BarFaze : BarFaze = 0;
 }
+
+void AAsistivnaBall::SetPlayer(bool new_player) {
+	player = new_player;
+}
+
+bool AAsistivnaBall::GetPlayer() {
+	return player;
+}

@@ -22,6 +22,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = "MainHud")
 	class UUserWidget* CurrentWidget;
 
+	UFUNCTION(BlueprintCallable, Category = "BallDistance")
 	void PronadjiNajblizuLoptu();
 
 	TArray<AActor*> player1;

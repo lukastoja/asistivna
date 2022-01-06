@@ -17,6 +17,23 @@ struct FVector;
 #define Asistivna_Source_Asistivna_AsistivnaBall_h_12_SPARSE_DATA
 #define Asistivna_Source_Asistivna_AsistivnaBall_h_12_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execGetPlayer) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(bool*)Z_Param__Result=P_THIS->GetPlayer(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSetPlayer) \
+	{ \
+		P_GET_UBOOL(Z_Param_new_player); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetPlayer(Z_Param_new_player); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execBallThrow) \
 	{ \
 		P_FINISH; \
@@ -84,6 +101,23 @@ struct FVector;
 
 
 #define Asistivna_Source_Asistivna_AsistivnaBall_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGetPlayer) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(bool*)Z_Param__Result=P_THIS->GetPlayer(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSetPlayer) \
+	{ \
+		P_GET_UBOOL(Z_Param_new_player); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetPlayer(Z_Param_new_player); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execBallThrow) \
 	{ \

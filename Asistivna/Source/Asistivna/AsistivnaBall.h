@@ -163,4 +163,10 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "BallThrow")
 	void BallThrow();
+
+	UFUNCTION(BlueprintCallable, Category = "Player")
+	void SetPlayer(bool new_player);
+
+	UFUNCTION(BlueprintPure, Category = "Player")
+	bool GetPlayer();
 };

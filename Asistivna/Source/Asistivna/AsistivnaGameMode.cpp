@@ -55,6 +55,8 @@ void AAsistivnaGameMode::PronadjiNajblizuLoptu()
 {
 	float dist = 9999999999;
 	float distE = 9999999999;
+	scorep1 = 0;
+	scorep2 = 0;
 	AActor* ClosestBall = nullptr;
 	AActor* nepBall;
 	player2.Empty();

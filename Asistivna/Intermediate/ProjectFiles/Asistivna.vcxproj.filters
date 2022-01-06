@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Asistivna.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{BDF7D538-1AE8-44A0-B4EE-84BC6034E1A7}</UniqueIdentifier>
+      <UniqueIdentifier>{2C90F903-1CD4-4207-9B22-EB454AB86D74}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Asistivna.Target.cs">
       <Filter>Source</Filter>
@@ -13,7 +13,7 @@
     </None>
     <None Include="..\..\UpgradeLog.htm" />
     <Filter Include="Config">
-      <UniqueIdentifier>{8E16DA8A-7D44-49DD-B21D-65E5A8551EE9}</UniqueIdentifier>
+      <UniqueIdentifier>{9BD0E04A-AF65-434E-851E-06A7A6DE8423}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -31,7 +31,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Asistivna">
-      <UniqueIdentifier>{441CF1CC-1896-44CE-B3C7-778DF7418BFA}</UniqueIdentifier>
+      <UniqueIdentifier>{2D10A15D-5E29-406A-BB9A-ADC8A7C59C75}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Asistivna\Asistivna.Build.cs">
       <Filter>Source\Asistivna</Filter>
@@ -66,15 +66,11 @@
     <ClInclude Include="..\..\Source\Asistivna\Bullin.h">
       <Filter>Source\Asistivna</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\Asistivna\VSigne.h">
-      <Filter>Source\Asistivna</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="..\..\Source\Asistivna\VSigne.cpp">
       <Filter>Source\Asistivna</Filter>
     </ClCompile>
+    <ClInclude Include="..\..\Source\Asistivna\VSigne.h">
+      <Filter>Source\Asistivna</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
