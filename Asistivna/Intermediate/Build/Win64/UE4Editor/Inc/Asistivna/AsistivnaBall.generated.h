@@ -17,6 +17,14 @@ struct FVector;
 #define Asistivna_Source_Asistivna_AsistivnaBall_h_12_SPARSE_DATA
 #define Asistivna_Source_Asistivna_AsistivnaBall_h_12_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execKrajRunde) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->KrajRunde(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execGetPlayer) \
 	{ \
 		P_FINISH; \
@@ -109,6 +117,14 @@ struct FVector;
 
 
 #define Asistivna_Source_Asistivna_AsistivnaBall_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execKrajRunde) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->KrajRunde(); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execGetPlayer) \
 	{ \

@@ -19,6 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 	UPackage* Z_Construct_UPackage__Script_Asistivna();
 	ASISTIVNA_API UFunction* Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP1();
 	ASISTIVNA_API UFunction* Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP2();
+	ASISTIVNA_API UFunction* Z_Construct_UFunction_AAsistivnaGameMode_KrajRunde();
 	ASISTIVNA_API UFunction* Z_Construct_UFunction_AAsistivnaGameMode_PobrisiLopte();
 	ASISTIVNA_API UFunction* Z_Construct_UFunction_AAsistivnaGameMode_PronadjiNajblizuLoptu();
 	UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
@@ -30,6 +31,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "GetScoreP1", &AAsistivnaGameMode::execGetScoreP1 },
 			{ "GetScoreP2", &AAsistivnaGameMode::execGetScoreP2 },
+			{ "KrajRunde", &AAsistivnaGameMode::execKrajRunde },
 			{ "PobrisiLopte", &AAsistivnaGameMode::execPobrisiLopte },
 			{ "PronadjiNajblizuLoptu", &AAsistivnaGameMode::execPronadjiNajblizuLoptu },
 		};
@@ -98,6 +100,29 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP2_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AAsistivnaGameMode_KrajRunde_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AAsistivnaGameMode_KrajRunde_Statics::Function_MetaDataParams[] = {
+		{ "Category", "ResetMap" },
+		{ "ModuleRelativePath", "AsistivnaGameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AAsistivnaGameMode_KrajRunde_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AAsistivnaGameMode, nullptr, "KrajRunde", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AAsistivnaGameMode_KrajRunde_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AAsistivnaGameMode_KrajRunde_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AAsistivnaGameMode_KrajRunde()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AAsistivnaGameMode_KrajRunde_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -172,6 +197,10 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 #endif
 		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_finalScorep1;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_brRunde_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_brRunde;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentWidget_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CurrentWidget;
@@ -190,6 +219,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_AAsistivnaGameMode_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP1, "GetScoreP1" }, // 473288904
 		{ &Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP2, "GetScoreP2" }, // 3155478386
+		{ &Z_Construct_UFunction_AAsistivnaGameMode_KrajRunde, "KrajRunde" }, // 3233380912
 		{ &Z_Construct_UFunction_AAsistivnaGameMode_PobrisiLopte, "PobrisiLopte" }, // 220965326
 		{ &Z_Construct_UFunction_AAsistivnaGameMode_PronadjiNajblizuLoptu, "PronadjiNajblizuLoptu" }, // 954560639
 	};
@@ -227,6 +257,13 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AAsistivnaGameMode_Statics::NewProp_finalScorep1 = { "finalScorep1", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAsistivnaGameMode, finalScorep1), METADATA_PARAMS(Z_Construct_UClass_AAsistivnaGameMode_Statics::NewProp_finalScorep1_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAsistivnaGameMode_Statics::NewProp_finalScorep1_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsistivnaGameMode_Statics::NewProp_brRunde_MetaData[] = {
+		{ "Category", "brRunde" },
+		{ "ModuleRelativePath", "AsistivnaGameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AAsistivnaGameMode_Statics::NewProp_brRunde = { "brRunde", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAsistivnaGameMode, brRunde), METADATA_PARAMS(Z_Construct_UClass_AAsistivnaGameMode_Statics::NewProp_brRunde_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAsistivnaGameMode_Statics::NewProp_brRunde_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsistivnaGameMode_Statics::NewProp_CurrentWidget_MetaData[] = {
 		{ "Category", "MainHud" },
 		{ "EditInline", "true" },
@@ -246,6 +283,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaGameMode_Statics::NewProp_roundOver,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaGameMode_Statics::NewProp_finalScorep2,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaGameMode_Statics::NewProp_finalScorep1,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaGameMode_Statics::NewProp_brRunde,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaGameMode_Statics::NewProp_CurrentWidget,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaGameMode_Statics::NewProp_MainHUD,
 	};
@@ -276,7 +314,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAsistivnaGameMode, 1894034489);
+	IMPLEMENT_CLASS(AAsistivnaGameMode, 2768470222);
 	template<> ASISTIVNA_API UClass* StaticClass<AAsistivnaGameMode>()
 	{
 		return AAsistivnaGameMode::StaticClass();

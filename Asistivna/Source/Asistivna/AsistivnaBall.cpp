@@ -76,6 +76,8 @@ AAsistivnaBall::AAsistivnaBall()
 
 	brLopti1 = 6;
 	brLopti2 = 6;
+
+	firstBall = true;
 }
 
 void AAsistivnaBall::BeginPlay()
@@ -398,4 +400,14 @@ void AAsistivnaBall::SetPlayer(bool new_player) {
 
 bool AAsistivnaBall::GetPlayer() {
 	return player;
+}
+
+void AAsistivnaBall::KrajRunde()
+{
+	player = true;
+	brLopti1 = 6;
+	brLopti2 = 6;
+	firstBall = true;
+	BarFaze = 0;
+	BarCounter = 0;
 }

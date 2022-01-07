@@ -87,6 +87,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "brLopti")
 	int brLopti2;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "bulin")
+	bool firstBall;
+
 protected:
 
 	/** Called for side to side input */
@@ -181,4 +184,7 @@ public:
 
 	UFUNCTION(BlueprintPure, Category = "Player")
 	bool GetPlayer();
+
+	UFUNCTION(BlueprintCallable, Category = "ResetMap")
+	void KrajRunde();
 };

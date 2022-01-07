@@ -23,6 +23,7 @@ AAsistivnaGameMode::AAsistivnaGameMode()
 	finalScorep2 = 0;
 
 	roundOver = false;
+	brRunde = 1;
 }
 
 void AAsistivnaGameMode::BeginPlay()
@@ -161,6 +162,16 @@ void AAsistivnaGameMode::PobrisiLopte()
 	}
 	
 	FoundActorsBullin[0]->Destroy();
+}
+
+void AAsistivnaGameMode::KrajRunde()
+{
+	PobrisiLopte();
+	finalScorep1 += scorep1;
+	finalScorep2 += scorep2;
+	scorep1 = 0;
+	scorep2 = 0;
+	++brRunde;
 }
 
 int AAsistivnaGameMode::GetScoreP1()

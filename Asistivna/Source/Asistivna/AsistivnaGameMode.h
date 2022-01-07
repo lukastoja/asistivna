@@ -28,6 +28,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "ResetMap")
 	void PobrisiLopte();
 
+	UFUNCTION(BlueprintCallable, Category = "ResetMap")
+	void KrajRunde();
+
 	TArray<AActor*> player1;
 	TArray<AActor*> player2;
 
@@ -39,6 +42,9 @@ public:
 
 	int scorep1;
 	int scorep2;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "brRunde")
+	int brRunde;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "finalscore")
 	int finalScorep1;
