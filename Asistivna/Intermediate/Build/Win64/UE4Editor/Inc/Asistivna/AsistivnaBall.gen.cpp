@@ -466,6 +466,16 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 #endif
 		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_LineAngle;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_VratiKameru_MetaData[];
+#endif
+		static void NewProp_VratiKameru_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_VratiKameru;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PratiKameru_MetaData[];
+#endif
+		static void NewProp_PratiKameru_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_PratiKameru;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_duljina_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_duljina;
@@ -627,6 +637,28 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_LineAngle = { "LineAngle", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAsistivnaBall, LineAngle), METADATA_PARAMS(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_LineAngle_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_LineAngle_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_VratiKameru_MetaData[] = {
+		{ "Category", "Kamera" },
+		{ "ModuleRelativePath", "AsistivnaBall.h" },
+	};
+#endif
+	void Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_VratiKameru_SetBit(void* Obj)
+	{
+		((AAsistivnaBall*)Obj)->VratiKameru = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_VratiKameru = { "VratiKameru", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AAsistivnaBall), &Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_VratiKameru_SetBit, METADATA_PARAMS(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_VratiKameru_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_VratiKameru_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_PratiKameru_MetaData[] = {
+		{ "Category", "Kamera" },
+		{ "ModuleRelativePath", "AsistivnaBall.h" },
+	};
+#endif
+	void Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_PratiKameru_SetBit(void* Obj)
+	{
+		((AAsistivnaBall*)Obj)->PratiKameru = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_PratiKameru = { "PratiKameru", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AAsistivnaBall), &Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_PratiKameru_SetBit, METADATA_PARAMS(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_PratiKameru_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_PratiKameru_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_duljina_MetaData[] = {
 		{ "Category", "Bar" },
 		{ "ModuleRelativePath", "AsistivnaBall.h" },
@@ -739,6 +771,8 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_strength,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_RollTorque,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_LineAngle,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_VratiKameru,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_PratiKameru,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_duljina,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_polovica_duljine,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaBall_Statics::NewProp_brzinaBara,
@@ -778,7 +812,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAsistivnaBall, 2074101846);
+	IMPLEMENT_CLASS(AAsistivnaBall, 3410445683);
 	template<> ASISTIVNA_API UClass* StaticClass<AAsistivnaBall>()
 	{
 		return AAsistivnaBall::StaticClass();

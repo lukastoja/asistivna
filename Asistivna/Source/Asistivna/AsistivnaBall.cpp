@@ -78,6 +78,8 @@ AAsistivnaBall::AAsistivnaBall()
 	brLopti2 = 6;
 
 	firstBall = true;
+	PratiKameru = false;
+	VratiKameru = false;
 }
 
 void AAsistivnaBall::BeginPlay()

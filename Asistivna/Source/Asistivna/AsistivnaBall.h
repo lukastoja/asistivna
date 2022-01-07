@@ -56,6 +56,12 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Bar")
 	float duljina;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Kamera")
+	bool PratiKameru;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Kamera")
+	bool VratiKameru;
+
 	bool barFlag;
 
 	/** Line angle*/
