@@ -17,6 +17,8 @@
 
 AAsistivnaBall::AAsistivnaBall()
 {
+	PrimaryActorTick.bCanEverTick = true;
+
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> BallMesh(TEXT("/Game/Rolling/Meshes/BallMesh.BallMesh"));
 
 	// Create mesh component for the ball
@@ -248,6 +250,8 @@ void AAsistivnaBall::IzracunajKrajnjuPoziciju()
 
 void AAsistivnaBall::Tick(float DeltaTime)
 {
+	Super::Tick(DeltaTime);
+
 	if (throwFlag)
 	{
 		T = T + GetWorld()->GetDeltaSeconds();
