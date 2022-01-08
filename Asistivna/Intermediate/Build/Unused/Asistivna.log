@@ -1,18 +1,3 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (E:\Epic Games\asistivna).
-  Parsing headers for AsistivnaEditor
-    Running UnrealHeaderTool "E:\Epic Games\asistivna\Asistivna\Asistivna.uproject" "E:\Epic Games\asistivna\Asistivna\Intermediate\Build\Win64\AsistivnaEditor\Development\AsistivnaEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
-  Reflection code generated for AsistivnaEditor in 3.7310988 seconds
-  Building AsistivnaEditor...
-  Using Visual Studio 2019 14.29.30138 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 7 actions with 12 processes...
-    [1/7] Asistivna.init.gen.cpp
-    [2/7] AsistivnaBall.gen.cpp
-    [3/7] AsistivnaGameMode.cpp
-    [4/7] AsistivnaBall.cpp
-    [5/7] UE4Editor-Asistivna.lib
-       Creating library E:\Epic Games\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Development\Asistivna\UE4Editor-Asistivna.lib and object E:\Epic Games\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Development\Asistivna\UE4Editor-Asistivna.exp
-    [6/7] UE4Editor-Asistivna.dll
-       Creating library E:\Epic Games\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Development\Asistivna\UE4Editor-Asistivna.suppressed.lib and object E:\Epic Games\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Development\Asistivna\UE4Editor-Asistivna.suppressed.exp
-    [7/7] AsistivnaEditor.target
-  Total time in Parallel executor: 6.50 seconds
-  Total execution time: 10.67 seconds
+  Target is up to date
+  Total execution time: 0.35 seconds

@@ -37,6 +37,15 @@ public:
 	UPROPERTY(EditAnywhere, Category = "player")
 	bool player;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
+	bool presaoBox;
+
+	UFUNCTION()
+	void DestroyBall();
+
+	UPROPERTY(EditAnywhere, Category = "Components")
+	FTimerHandle DestroyHandle;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

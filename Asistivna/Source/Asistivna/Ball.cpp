@@ -36,6 +36,8 @@ ABall::ABall()
 	t = 0;
 
 	player = true;
+
+	presaoBox = false;
 }
 
 void ABall::SetUpThrowMethod(FVector lineVector)
@@ -57,7 +59,8 @@ void ABall::RollBall(FVector Torque)
 void ABall::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	GetWorld()->GetTimerManager().SetTimer(DestroyHandle, this, &ABall::DestroyBall, 5.f, true);
 }
 
 void ABall::IzracunajKrajnjuPoziciju(FVector lineVector)
@@ -110,6 +113,20 @@ void ABall::SetUpPlayer(bool p)
 	}
 	else {
 		Ball->SetMaterial(0, MaterialBallP2);
+	}
+}
+
+void ABall::DestroyBall()
+{
+	if (DestroyHandle.IsValid())
+	{
+		//GetWorldTimerManager().ClearTimer(DestroyHandle);
+		GetWorld()->GetTimerManager().ClearTimer(DestroyHandle);
+	}
+
+	if (!presaoBox)
+	{
+		this->Destroy();
 	}
 }
 
