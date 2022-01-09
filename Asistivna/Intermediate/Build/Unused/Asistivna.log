@@ -1,3 +1,30 @@
-﻿  Using 'git status' to determine working set for adaptive non-unity build (E:\Epic Games\asistivna).
-  Target is up to date
-  Total execution time: 0.35 seconds
+﻿  Cleaning AsistivnaEditor and UnrealHeaderTool binaries...
+  Using 'git status' to determine working set for adaptive non-unity build (D:\Programiranje\Faks\Asistivna\asistivna).
+  Creating makefile for AsistivnaEditor (no existing makefile)
+  Parsing headers for AsistivnaEditor
+    Running UnrealHeaderTool "D:\Programiranje\Faks\Asistivna\asistivna\Asistivna\Asistivna.uproject" "D:\Programiranje\Faks\Asistivna\asistivna\Asistivna\Intermediate\Build\Win64\AsistivnaEditor\Development\AsistivnaEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for AsistivnaEditor in 21,9157718 seconds
+  Building AsistivnaEditor...
+  Using Visual Studio 2019 14.29.30136 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (D:\Windows Kits\10).
+  Building 17 actions with 8 processes...
+    [1/17] Default.rc2
+    [2/17] SharedPCH.Engine.ShadowErrors.cpp
+    [3/17] Asistivna.init.gen.cpp
+    [4/17] Ball.cpp
+    [5/17] Asistivna.cpp
+    [6/17] Bullin.cpp
+    [7/17] AsistivnaGameMode.gen.cpp
+    [8/17] Ball.gen.cpp
+    [9/17] VSigne.gen.cpp
+    [10/17] Bullin.gen.cpp
+    [11/17] AsistivnaBall.gen.cpp
+    [12/17] VSigne.cpp
+    [13/17] AsistivnaGameMode.cpp
+    [14/17] AsistivnaBall.cpp
+    [15/17] UE4Editor-Asistivna.lib
+       Creating library D:\Programiranje\Faks\Asistivna\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Development\Asistivna\UE4Editor-Asistivna.lib and object D:\Programiranje\Faks\Asistivna\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Development\Asistivna\UE4Editor-Asistivna.exp
+    [16/17] UE4Editor-Asistivna.dll
+       Creating library D:\Programiranje\Faks\Asistivna\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Development\Asistivna\UE4Editor-Asistivna.suppressed.lib and object D:\Programiranje\Faks\Asistivna\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Development\Asistivna\UE4Editor-Asistivna.suppressed.exp
+    [17/17] AsistivnaEditor.target
+  Total time in Parallel executor: 56,44 seconds
+  Total execution time: 99,56 seconds
