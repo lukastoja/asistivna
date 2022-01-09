@@ -40,6 +40,9 @@ public:
 	UFUNCTION(BlueprintPure, Category = "score")
 	int GetScoreP2();
 
+	UFUNCTION(BlueprintPure, Category = "score")
+	bool BulinExists();
+
 	int scorep1;
 	int scorep2;
 

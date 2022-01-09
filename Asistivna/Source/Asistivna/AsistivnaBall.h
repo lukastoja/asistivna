@@ -93,6 +93,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "brLopti")
 	int brLopti2;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ActionString")
+	int currentString;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "bulin")
 	bool firstBall;
 
@@ -137,6 +140,7 @@ protected:
 	bool throwFlag;
 	FVector pocetna_pozicija;
 	FVector krajnja_pozicija;
+	
 
 	/**line vektor za spawn lopte u pravom smjeru**/
 	FVector lineVector;
@@ -193,4 +197,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "ResetMap")
 	void KrajRunde();
+
+	UFUNCTION(BlueprintCallable, Category = "ActionString")
+	void ChangeActionString();
 };

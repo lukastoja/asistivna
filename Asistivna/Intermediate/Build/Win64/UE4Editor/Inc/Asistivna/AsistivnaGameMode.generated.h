@@ -16,6 +16,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define Asistivna_Source_Asistivna_AsistivnaGameMode_h_12_SPARSE_DATA
 #define Asistivna_Source_Asistivna_AsistivnaGameMode_h_12_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execBulinExists) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(bool*)Z_Param__Result=P_THIS->BulinExists(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execGetScoreP2) \
 	{ \
 		P_FINISH; \
@@ -58,6 +66,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 
 #define Asistivna_Source_Asistivna_AsistivnaGameMode_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execBulinExists) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(bool*)Z_Param__Result=P_THIS->BulinExists(); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execGetScoreP2) \
 	{ \

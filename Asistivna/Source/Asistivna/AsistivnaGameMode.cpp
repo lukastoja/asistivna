@@ -183,3 +183,13 @@ int AAsistivnaGameMode::GetScoreP2()
 {
 	return scorep2;
 }
+
+bool AAsistivnaGameMode::BulinExists()
+{
+	TArray<AActor*> FoundActorsBullin;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ABullin::StaticClass(), FoundActorsBullin);
+	if (FoundActorsBullin.Num() > 0) {
+		return true;
+	}
+	return false;
+}

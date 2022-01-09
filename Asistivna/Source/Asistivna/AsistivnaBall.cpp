@@ -80,6 +80,8 @@ AAsistivnaBall::AAsistivnaBall()
 	firstBall = true;
 	PratiKameru = false;
 	VratiKameru = false;
+
+	currentString = 1;
 }
 
 void AAsistivnaBall::BeginPlay()
@@ -385,14 +387,17 @@ void AAsistivnaBall::BullinRoll() {
 	ABullin* bullin = GetWorld()->SpawnActor<ABullin>(BullinClass, BallSpawnTransform, SpawnParameters);
 	const FVector Torque = FVector(strength * GetBarCounter() * RollTorque * (FVector::CrossProduct(FVector(0, 0, 1), lineVector).X), strength * GetBarCounter() * RollTorque * (FVector::CrossProduct(FVector(0, 0, 1), lineVector).Y), 0.f);
 	bullin->RollBall(Torque);
-	AfterPlay();
+	BarFaze = 0;
+	BarCounter = 0;
 }
 
 void AAsistivnaBall::IncreaseBarFaze() {
+	currentString = 1;
 	++BarFaze;
 }
 
 void AAsistivnaBall::DecreaseBarFaze() {
+	currentString = 1;
 	BarFaze > 0 ? --BarFaze : BarFaze = 0;
 }
 
@@ -412,4 +417,16 @@ void AAsistivnaBall::KrajRunde()
 	firstBall = true;
 	BarFaze = 0;
 	BarCounter = 0;
+}
+
+void AAsistivnaBall::ChangeActionString()
+{
+	if (BarFaze < 3 || firstBall)
+	{
+		currentString = (currentString + 1) % 2;
+	}
+	else
+	{
+		currentString = (currentString + 1) % 3;
+	}
 }
