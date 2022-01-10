@@ -54,6 +54,11 @@ void AAsistivnaGameMode::BeginPlay()
 
 	scorep1 = 0;
 	scorep2 = 0;
+	finalScorep1 = 0;
+	finalScorep2 = 0;
+
+	roundOver = false;
+	brRunde = 1;
 }
 
 void AAsistivnaGameMode::PronadjiNajblizuLoptu()

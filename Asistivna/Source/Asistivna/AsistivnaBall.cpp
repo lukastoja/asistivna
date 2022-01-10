@@ -280,24 +280,27 @@ void AAsistivnaBall::Tick(float DeltaTime)
 
 	//BarCounter = BarCounter < 1 ? BarCounter + DeltaTime : 0;	//ovo mi se ne svidja jer je to anton radio :)
 	// moj optimalni kod unistavas
+	if (BarFaze < 3)
+	{
+		if (barFlag)
+		{
+			BarCounter = BarCounter + brzinaBara;
+		}
+		else
+		{
+			BarCounter = BarCounter - brzinaBara;
+		}
 
-	if (barFlag)
-	{
-		BarCounter = BarCounter + brzinaBara;
+		if (BarCounter >= 1)
+		{
+			barFlag = false;
+		}
+		else if (BarCounter <= 0)
+		{
+			barFlag = true;
+		}
 	}
-	else
-	{
-		BarCounter = BarCounter - brzinaBara;
-	}
-
-	if (BarCounter >= 1)
-	{
-		barFlag = false;
-	}
-	else if (BarCounter <= 0)
-	{
-		barFlag = true;
-	}
+	
 	
 	if (BarFaze < 0) {
 		BarFaze = 0;
