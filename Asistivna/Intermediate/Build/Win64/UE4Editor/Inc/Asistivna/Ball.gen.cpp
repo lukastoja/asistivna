@@ -78,10 +78,6 @@ void EmptyLinkFunctionForGeneratedCodeBall() {}
 		static void NewProp_player_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_player;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_strength_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_strength;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaterialBallP2_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MaterialBallP2;
@@ -140,13 +136,6 @@ void EmptyLinkFunctionForGeneratedCodeBall() {}
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ABall_Statics::NewProp_player = { "player", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ABall), &Z_Construct_UClass_ABall_Statics::NewProp_player_SetBit, METADATA_PARAMS(Z_Construct_UClass_ABall_Statics::NewProp_player_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABall_Statics::NewProp_player_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABall_Statics::NewProp_strength_MetaData[] = {
-		{ "Category", "Movement" },
-		{ "ModuleRelativePath", "Ball.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABall_Statics::NewProp_strength = { "strength", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABall, strength), METADATA_PARAMS(Z_Construct_UClass_ABall_Statics::NewProp_strength_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABall_Statics::NewProp_strength_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABall_Statics::NewProp_MaterialBallP2_MetaData[] = {
 		{ "Category", "Material" },
 		{ "ModuleRelativePath", "Ball.h" },
@@ -173,7 +162,6 @@ void EmptyLinkFunctionForGeneratedCodeBall() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABall_Statics::NewProp_DestroyHandle,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABall_Statics::NewProp_presaoBox,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABall_Statics::NewProp_player,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABall_Statics::NewProp_strength,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABall_Statics::NewProp_MaterialBallP2,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABall_Statics::NewProp_MaterialBallP1,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABall_Statics::NewProp_Ball,
@@ -205,7 +193,7 @@ void EmptyLinkFunctionForGeneratedCodeBall() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABall, 518988453);
+	IMPLEMENT_CLASS(ABall, 3626756542);
 	template<> ASISTIVNA_API UClass* StaticClass<ABall>()
 	{
 		return ABall::StaticClass();

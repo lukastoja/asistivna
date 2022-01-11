@@ -25,6 +25,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "BallDistance")
 	void PronadjiNajblizuLoptu();
 
+	UFUNCTION(BlueprintCallable, Category = "KrizLocation")
+	FVector GetKrizLocation();
+
 	UFUNCTION(BlueprintCallable, Category = "ResetMap")
 	void PobrisiLopte();
 

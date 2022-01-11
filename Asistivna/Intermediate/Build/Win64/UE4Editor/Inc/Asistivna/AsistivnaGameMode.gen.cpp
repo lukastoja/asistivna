@@ -18,6 +18,8 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 	ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
 	UPackage* Z_Construct_UPackage__Script_Asistivna();
 	ASISTIVNA_API UFunction* Z_Construct_UFunction_AAsistivnaGameMode_BulinExists();
+	ASISTIVNA_API UFunction* Z_Construct_UFunction_AAsistivnaGameMode_GetKrizLocation();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ASISTIVNA_API UFunction* Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP1();
 	ASISTIVNA_API UFunction* Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP2();
 	ASISTIVNA_API UFunction* Z_Construct_UFunction_AAsistivnaGameMode_KrajRunde();
@@ -31,6 +33,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 		UClass* Class = AAsistivnaGameMode::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "BulinExists", &AAsistivnaGameMode::execBulinExists },
+			{ "GetKrizLocation", &AAsistivnaGameMode::execGetKrizLocation },
 			{ "GetScoreP1", &AAsistivnaGameMode::execGetScoreP1 },
 			{ "GetScoreP2", &AAsistivnaGameMode::execGetScoreP2 },
 			{ "KrajRunde", &AAsistivnaGameMode::execKrajRunde },
@@ -74,6 +77,39 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AAsistivnaGameMode_BulinExists_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AAsistivnaGameMode_GetKrizLocation_Statics
+	{
+		struct AsistivnaGameMode_eventGetKrizLocation_Parms
+		{
+			FVector ReturnValue;
+		};
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AAsistivnaGameMode_GetKrizLocation_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AsistivnaGameMode_eventGetKrizLocation_Parms, ReturnValue), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AAsistivnaGameMode_GetKrizLocation_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AAsistivnaGameMode_GetKrizLocation_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AAsistivnaGameMode_GetKrizLocation_Statics::Function_MetaDataParams[] = {
+		{ "Category", "KrizLocation" },
+		{ "ModuleRelativePath", "AsistivnaGameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AAsistivnaGameMode_GetKrizLocation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AAsistivnaGameMode, nullptr, "GetKrizLocation", nullptr, nullptr, sizeof(AsistivnaGameMode_eventGetKrizLocation_Parms), Z_Construct_UFunction_AAsistivnaGameMode_GetKrizLocation_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AAsistivnaGameMode_GetKrizLocation_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04820401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AAsistivnaGameMode_GetKrizLocation_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AAsistivnaGameMode_GetKrizLocation_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AAsistivnaGameMode_GetKrizLocation()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AAsistivnaGameMode_GetKrizLocation_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -258,6 +294,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AAsistivnaGameMode_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AAsistivnaGameMode_BulinExists, "BulinExists" }, // 467943992
+		{ &Z_Construct_UFunction_AAsistivnaGameMode_GetKrizLocation, "GetKrizLocation" }, // 1972542454
 		{ &Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP1, "GetScoreP1" }, // 473288904
 		{ &Z_Construct_UFunction_AAsistivnaGameMode_GetScoreP2, "GetScoreP2" }, // 3155478386
 		{ &Z_Construct_UFunction_AAsistivnaGameMode_KrajRunde, "KrajRunde" }, // 3233380912
@@ -355,7 +392,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAsistivnaGameMode, 4272639546);
+	IMPLEMENT_CLASS(AAsistivnaGameMode, 4102120462);
 	template<> ASISTIVNA_API UClass* StaticClass<AAsistivnaGameMode>()
 	{
 		return AAsistivnaGameMode::StaticClass();

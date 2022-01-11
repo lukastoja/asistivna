@@ -27,10 +27,10 @@ public:
 	//flag za odredivanej ce se lopta rollat ili bacat
 	bool flagRT;
 
-	UPROPERTY(EditAnywhere, Category = "Movement")
 	float strength;
+	float bar;
 	
-	void SetUpThrowMethod(FVector lineVector);
+	void SetUpThrowMethod(FVector lineVector, float bar1, float strength1);
 
 	void RollBall(FVector Torque);
 

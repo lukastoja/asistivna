@@ -1,0 +1,5 @@
+E:\Epic Games\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Development\Asistivna\Definitions.Asistivna.h
+C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+E:\Epic Games\asistivna\Asistivna\Source\Asistivna/Kriz.h
+E:\Epic Games\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Inc\Asistivna\Kriz.generated.h

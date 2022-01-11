@@ -8,6 +8,7 @@
 #include "Blueprint/UserWidget.h"
 #include "Ball.h"
 #include "Bullin.h"
+#include "Kriz.h"
 
 AAsistivnaGameMode::AAsistivnaGameMode()
 {
@@ -151,6 +152,16 @@ void AAsistivnaGameMode::PronadjiNajblizuLoptu()
 			}
 		}
 	}
+}
+
+FVector AAsistivnaGameMode::GetKrizLocation()
+{
+	TArray<AActor*> FoundActorsKriz;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AKriz::StaticClass(), FoundActorsKriz);
+
+	FVector kriz = FoundActorsKriz[0]->GetActorLocation();
+	kriz.Z = kriz.Z + 120;
+	return kriz;
 }
 
 void AAsistivnaGameMode::PobrisiLopte()

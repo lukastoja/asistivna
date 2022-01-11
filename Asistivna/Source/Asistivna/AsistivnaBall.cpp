@@ -200,7 +200,7 @@ void AAsistivnaBall::SpawnThrow()
 	BallSpawnTransform.SetScale3D(FVector(1.f));
 
 	ABall* ball =  GetWorld()->SpawnActor<ABall>(BallClass, BallSpawnTransform, SpawnParameters);
-	ball->SetUpThrowMethod(lineVector);
+	ball->SetUpThrowMethod(lineVector, GetBarCounter(), strength);
 	ball->SetUpPlayer(player);
 }
 

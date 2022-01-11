@@ -40,8 +40,10 @@ ABall::ABall()
 	presaoBox = false;
 }
 
-void ABall::SetUpThrowMethod(FVector lineVector)
+void ABall::SetUpThrowMethod(FVector lineVector, float bar1, float strength1)
 {
+	bar = bar1;
+	strength = strength1;
 	t = 0;
 	T = 0;
 	throwFlag = true;
@@ -66,7 +68,7 @@ void ABall::BeginPlay()
 void ABall::IzracunajKrajnjuPoziciju(FVector lineVector)
 {
 	float x, y, z;
-	float dist = 2000;
+	float dist = bar * strength * 10;
 	FVector direction = lineVector;
 
 	x = pocetna_pozicija.X + dist * direction.X;
@@ -91,7 +93,7 @@ void ABall::Tick(float DeltaTime)
 				t = T / 3;
 				x = pocetna_pozicija.X * (1 - t) + krajnja_pozicija.X * t;
 				y = pocetna_pozicija.Y * (1 - t) + krajnja_pozicija.Y * t;
-				z = strength * FMath::Sin(t * PI) + pocetna_pozicija.Z;
+				z = bar * strength * 10 * FMath::Sin(t * PI) + pocetna_pozicija.Z;
 
 				FVector MoveDirection = FVector(x, y, z);
 				SetActorLocation(MoveDirection);

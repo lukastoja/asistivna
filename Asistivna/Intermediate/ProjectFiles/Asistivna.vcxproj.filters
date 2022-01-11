@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Asistivna.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{1D44104A-2C74-46CC-AA47-2D4BA19DA190}</UniqueIdentifier>
+      <UniqueIdentifier>{1FF3D65D-8FC7-4186-AA17-F3B27E475145}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Asistivna.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\UpgradeLog.htm" />
     <None Include="..\..\WoodFlooringVol02.png" />
     <Filter Include="Config">
-      <UniqueIdentifier>{60CA3DAB-03BF-486B-A7EF-E275878CBB8A}</UniqueIdentifier>
+      <UniqueIdentifier>{A89AC877-83B2-4A95-8DD3-8CE095EA098A}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Asistivna">
-      <UniqueIdentifier>{1C2DA2F8-B3EF-4EDF-88C8-5052CFCB9907}</UniqueIdentifier>
+      <UniqueIdentifier>{0FFE608D-9689-4E46-81E2-5BC402FCFA43}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Asistivna\Asistivna.Build.cs">
       <Filter>Source\Asistivna</Filter>
@@ -73,5 +73,15 @@
     <ClInclude Include="..\..\Source\Asistivna\VSigne.h">
       <Filter>Source\Asistivna</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\Asistivna\Kriz.h">
+      <Filter>Source\Asistivna</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\Asistivna\Kriz.cpp">
+      <Filter>Source\Asistivna</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
