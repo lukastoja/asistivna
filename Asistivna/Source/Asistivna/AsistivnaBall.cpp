@@ -307,7 +307,7 @@ void AAsistivnaBall::Tick(float DeltaTime)
 	}
 	else if (BarFaze == 0) {
 		BallLocation = GetActorLocation();
-		BallLocation.Y = GetBarCounter() * duljina - polovica_duljine;
+		BallLocation.Y = GetBarCounter() * duljina - polovica_duljine + 942;
 		BallLocation.Z = 230;
 		SetActorLocation(BallLocation);
 	}

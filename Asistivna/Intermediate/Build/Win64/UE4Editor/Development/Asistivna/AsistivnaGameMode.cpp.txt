@@ -1,12 +1,12 @@
-E:\Epic Games\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Development\Asistivna\Definitions.Asistivna.h
-E:\Epic Games\asistivna\Asistivna\Source\Asistivna\AsistivnaGameMode.h
+E:\Epic Games\asistivna\Asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Development\Asistivna\Definitions.Asistivna.h
+E:\Epic Games\asistivna\Asistivna\Asistivna\Source\Asistivna\AsistivnaGameMode.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
-E:\Epic Games\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Inc\Asistivna\AsistivnaGameMode.generated.h
-E:\Epic Games\asistivna\Asistivna\Source\Asistivna\AsistivnaBall.h
-E:\Epic Games\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Inc\Asistivna\AsistivnaBall.generated.h
+E:\Epic Games\asistivna\Asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Inc\Asistivna\AsistivnaGameMode.generated.h
+E:\Epic Games\asistivna\Asistivna\Asistivna\Source\Asistivna\AsistivnaBall.h
+E:\Epic Games\asistivna\Asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Inc\Asistivna\AsistivnaBall.generated.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Public\Engine.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Core\Public\Misc/MonolithicHeaderBoilerplate.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Core\Public\Core.h
@@ -783,9 +783,9 @@ C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\DynamicPropertyPath.generated.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\WidgetBlueprintGeneratedClass.generated.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\UserWidget.generated.h
-E:\Epic Games\asistivna\Asistivna\Source\Asistivna\Ball.h
-E:\Epic Games\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Inc\Asistivna\Ball.generated.h
-E:\Epic Games\asistivna\Asistivna\Source\Asistivna\Bullin.h
-E:\Epic Games\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Inc\Asistivna\Bullin.generated.h
-E:\Epic Games\asistivna\Asistivna\Source\Asistivna\Kriz.h
-E:\Epic Games\asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Inc\Asistivna\Kriz.generated.h
+E:\Epic Games\asistivna\Asistivna\Asistivna\Source\Asistivna\Ball.h
+E:\Epic Games\asistivna\Asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Inc\Asistivna\Ball.generated.h
+E:\Epic Games\asistivna\Asistivna\Asistivna\Source\Asistivna\Bullin.h
+E:\Epic Games\asistivna\Asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Inc\Asistivna\Bullin.generated.h
+E:\Epic Games\asistivna\Asistivna\Asistivna\Source\Asistivna\Kriz.h
+E:\Epic Games\asistivna\Asistivna\Asistivna\Intermediate\Build\Win64\UE4Editor\Inc\Asistivna\Kriz.generated.h

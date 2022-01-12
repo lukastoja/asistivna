@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Asistivna.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{1FF3D65D-8FC7-4186-AA17-F3B27E475145}</UniqueIdentifier>
+      <UniqueIdentifier>{02BB6622-6B5E-4B48-83BB-CAD00CC951A9}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Asistivna.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\UpgradeLog.htm" />
     <None Include="..\..\WoodFlooringVol02.png" />
     <Filter Include="Config">
-      <UniqueIdentifier>{A89AC877-83B2-4A95-8DD3-8CE095EA098A}</UniqueIdentifier>
+      <UniqueIdentifier>{17E46755-4951-4DED-93F3-90C85FF590FD}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Asistivna">
-      <UniqueIdentifier>{0FFE608D-9689-4E46-81E2-5BC402FCFA43}</UniqueIdentifier>
+      <UniqueIdentifier>{59E610F9-9518-4439-9367-F8BD219BD524}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Asistivna\Asistivna.Build.cs">
       <Filter>Source\Asistivna</Filter>
@@ -67,21 +67,17 @@
     <ClInclude Include="..\..\Source\Asistivna\Bullin.h">
       <Filter>Source\Asistivna</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Asistivna\Kriz.cpp">
+      <Filter>Source\Asistivna</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Asistivna\Kriz.h">
+      <Filter>Source\Asistivna</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Asistivna\VSigne.cpp">
       <Filter>Source\Asistivna</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Asistivna\VSigne.h">
       <Filter>Source\Asistivna</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\Asistivna\Kriz.h">
-      <Filter>Source\Asistivna</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Source\Asistivna\Kriz.cpp">
-      <Filter>Source\Asistivna</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

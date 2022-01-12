@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "Asistivna",
-			"Path": "E:\\Epic Games\\asistivna\\Asistivna\\Source\\Asistivna.Target.cs",
+			"Path": "E:\\Epic Games\\asistivna\\Asistivna\\Asistivna\\Source\\Asistivna.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "AsistivnaEditor",
-			"Path": "E:\\Epic Games\\asistivna\\Asistivna\\Source\\AsistivnaEditor.Target.cs",
+			"Path": "E:\\Epic Games\\asistivna\\Asistivna\\Asistivna\\Source\\AsistivnaEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]

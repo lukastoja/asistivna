@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28315.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{481EED62-A63A-4A46-BA7F-FDD535FDEC05}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{49923DBF-713E-4B64-96D4-5404D962CC07}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Games", "Games", "{E76572DC-BEFA-4CD6-8C5A-1FF9C87B712D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Games", "Games", "{1280BC66-5B1C-440D-9998-76B372EACA6F}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UE4", "Intermediate\ProjectFiles\UE4.vcxproj", "{2540E1DE-8DA2-4411-93A5-1D26886212C8}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Asistivna", "Intermediate\ProjectFiles\Asistivna.vcxproj", "{59460442-4A13-4786-AB84-773B1A22C120}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Visualizers", "Visualizers", "{4E5C5DA9-04CF-4337-BC8A-FBB7602078F3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Visualizers", "Visualizers", "{8C47EA6E-08BB-42A1-B58A-4108AEF83831}"
 	ProjectSection(SolutionItems) = preProject
 		C:\Program Files\Epic Games\UE_4.24\Engine\Extras\VisualStudioDebugging\UE4.natvis = C:\Program Files\Epic Games\UE_4.24\Engine\Extras\VisualStudioDebugging\UE4.natvis
 	EndProjectSection
@@ -50,7 +50,8 @@ Global
 		{2540E1DE-8DA2-4411-93A5-1D26886212C8}.Shipping|Android.ActiveCfg = BuiltWithUnrealBuildTool|Win32
 		{2540E1DE-8DA2-4411-93A5-1D26886212C8}.Shipping|Win32.ActiveCfg = BuiltWithUnrealBuildTool|Win32
 		{2540E1DE-8DA2-4411-93A5-1D26886212C8}.Shipping|Win64.ActiveCfg = BuiltWithUnrealBuildTool|Win32
-		{59460442-4A13-4786-AB84-773B1A22C120}.DebugGame Editor|Android.ActiveCfg = Invalid|Win32
+		{59460442-4A13-4786-AB84-773B1A22C120}.DebugGame Editor|Android.ActiveCfg = Development_Editor|x64
+		{59460442-4A13-4786-AB84-773B1A22C120}.DebugGame Editor|Android.Build.0 = Development_Editor|x64
 		{59460442-4A13-4786-AB84-773B1A22C120}.DebugGame Editor|Win32.ActiveCfg = Invalid|Win32
 		{59460442-4A13-4786-AB84-773B1A22C120}.DebugGame Editor|Win64.ActiveCfg = DebugGame_Editor|x64
 		{59460442-4A13-4786-AB84-773B1A22C120}.DebugGame Editor|Win64.Build.0 = DebugGame_Editor|x64
@@ -81,7 +82,10 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{2540E1DE-8DA2-4411-93A5-1D26886212C8} = {481EED62-A63A-4A46-BA7F-FDD535FDEC05}
-		{59460442-4A13-4786-AB84-773B1A22C120} = {E76572DC-BEFA-4CD6-8C5A-1FF9C87B712D}
+		{2540E1DE-8DA2-4411-93A5-1D26886212C8} = {49923DBF-713E-4B64-96D4-5404D962CC07}
+		{59460442-4A13-4786-AB84-773B1A22C120} = {1280BC66-5B1C-440D-9998-76B372EACA6F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F183268-769E-4B86-812D-1930B7DCD6E2}
 	EndGlobalSection
 EndGlobal
