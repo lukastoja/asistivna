@@ -59,6 +59,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "finalscore")
 	bool roundOver;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "udaljenostLopte")
+	float udaljenostLopte;
 };
 
 

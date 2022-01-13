@@ -60,6 +60,7 @@ void AAsistivnaGameMode::BeginPlay()
 
 	roundOver = false;
 	brRunde = 1;
+	udaljenostLopte = 0;
 }
 
 void AAsistivnaGameMode::PronadjiNajblizuLoptu()
@@ -151,6 +152,13 @@ void AAsistivnaGameMode::PronadjiNajblizuLoptu()
 				scorep2++;
 			}
 		}
+	}
+
+	if (dist > distE) {
+		udaljenostLopte = distE;
+	}
+	else {
+		udaljenostLopte = dist;
 	}
 }
 

@@ -260,6 +260,10 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_udaljenostLopte_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_udaljenostLopte;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_roundOver_MetaData[];
 #endif
 		static void NewProp_roundOver_SetBit(void* Obj);
@@ -310,6 +314,13 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsistivnaGameMode_Statics::NewProp_udaljenostLopte_MetaData[] = {
+		{ "Category", "udaljenostLopte" },
+		{ "ModuleRelativePath", "AsistivnaGameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AAsistivnaGameMode_Statics::NewProp_udaljenostLopte = { "udaljenostLopte", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAsistivnaGameMode, udaljenostLopte), METADATA_PARAMS(Z_Construct_UClass_AAsistivnaGameMode_Statics::NewProp_udaljenostLopte_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAsistivnaGameMode_Statics::NewProp_udaljenostLopte_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsistivnaGameMode_Statics::NewProp_roundOver_MetaData[] = {
 		{ "Category", "finalscore" },
 		{ "ModuleRelativePath", "AsistivnaGameMode.h" },
@@ -358,6 +369,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 #endif
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AAsistivnaGameMode_Statics::NewProp_MainHUD = { "MainHUD", nullptr, (EPropertyFlags)0x0014000000000005, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAsistivnaGameMode, MainHUD), Z_Construct_UClass_UUserWidget_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AAsistivnaGameMode_Statics::NewProp_MainHUD_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAsistivnaGameMode_Statics::NewProp_MainHUD_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AAsistivnaGameMode_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaGameMode_Statics::NewProp_udaljenostLopte,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaGameMode_Statics::NewProp_roundOver,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaGameMode_Statics::NewProp_finalScorep2,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsistivnaGameMode_Statics::NewProp_finalScorep1,
@@ -392,7 +404,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaGameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAsistivnaGameMode, 4102120462);
+	IMPLEMENT_CLASS(AAsistivnaGameMode, 2754193953);
 	template<> ASISTIVNA_API UClass* StaticClass<AAsistivnaGameMode>()
 	{
 		return AAsistivnaGameMode::StaticClass();
