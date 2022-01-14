@@ -24,6 +24,10 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Material")
 	class UMaterial* MaterialBallP2;
 
+	UPROPERTY(EditAnywhere, Category = "testStrength")
+	int testStrength;
+
+
 	//flag za odredivanej ce se lopta rollat ili bacat
 	bool flagRT;
 

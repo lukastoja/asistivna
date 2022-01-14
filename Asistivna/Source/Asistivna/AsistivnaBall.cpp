@@ -194,7 +194,7 @@ void AAsistivnaBall::SpawnThrow()
 
 	FTransform BallSpawnTransform;
 	FVector new_ball_location = GetActorLocation();
-	new_ball_location.Z = 100;
+	new_ball_location.Z = 150;
 	BallSpawnTransform.SetLocation(GetActorForwardVector() * spawnLocation + new_ball_location);
 	BallSpawnTransform.SetRotation(GetActorRotation().Quaternion());
 	BallSpawnTransform.SetScale3D(FVector(1.f));
@@ -348,8 +348,8 @@ void AAsistivnaBall::AfterPlay() {
 }
 
 void AAsistivnaBall::BallThrow() {
-	AfterPlay();
 	SpawnThrow();	
+	AfterPlay();
 }
 
 void AAsistivnaBall::BallRoll() {

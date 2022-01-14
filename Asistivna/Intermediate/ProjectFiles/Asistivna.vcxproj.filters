@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Asistivna.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{C2C966A8-396D-489A-ADC9-0D21C6FF1360}</UniqueIdentifier>
+      <UniqueIdentifier>{41B3261E-E3EF-468D-B2B5-79CD08C6421B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Asistivna.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\UpgradeLog.htm" />
     <None Include="..\..\WoodFlooringVol02.png" />
     <Filter Include="Config">
-      <UniqueIdentifier>{78AE8071-4F53-4721-BE0F-04A84DCF44FA}</UniqueIdentifier>
+      <UniqueIdentifier>{12537FA8-2C74-40AD-BA22-5A9724D2AAAF}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Asistivna">
-      <UniqueIdentifier>{F2D68F97-539B-44CD-9B6D-368B623A511D}</UniqueIdentifier>
+      <UniqueIdentifier>{B283775A-A3BA-45FA-AC9C-6FF0CE6BAF8B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Asistivna\Asistivna.Build.cs">
       <Filter>Source\Asistivna</Filter>

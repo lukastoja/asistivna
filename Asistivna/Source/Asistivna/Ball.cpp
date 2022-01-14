@@ -38,6 +38,7 @@ ABall::ABall()
 	player = true;
 
 	presaoBox = false;
+	testStrength = 10;
 }
 
 void ABall::SetUpThrowMethod(FVector lineVector, float bar1, float strength1)
@@ -50,6 +51,10 @@ void ABall::SetUpThrowMethod(FVector lineVector, float bar1, float strength1)
 	pocetna_pozicija = GetActorLocation();
 	IzracunajKrajnjuPoziciju(lineVector);
 	flagRT = true;
+
+	FVector throwVector = lineVector * bar * strength * Ball->GetMass() * testStrength;
+	UE_LOG(LogTemp, Warning, TEXT("Text, %f %f %f"), throwVector.X, throwVector.Y, throwVector.Z);
+	Ball->AddImpulse(throwVector);
 }
 
 void ABall::RollBall(FVector Torque)
@@ -82,7 +87,7 @@ void ABall::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (flagRT) //ako je true onda throw inace roll
+	/*if (flagRT) //ako je true onda throw inace roll
 	{
 		if (throwFlag)
 		{
@@ -103,7 +108,7 @@ void ABall::Tick(float DeltaTime)
 				throwFlag = false;
 			}
 		}
-	} 
+	} */
 }
 
 void ABall::SetUpPlayer(bool p)

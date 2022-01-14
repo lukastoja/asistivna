@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28315.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{C7B39F6D-6C07-4692-9E46-77A1536B1203}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{B48A0BE5-6149-49AC-A03E-BDE6D4CE00F8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Games", "Games", "{F948BC34-81B4-47C2-A174-21B5B42E527A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Games", "Games", "{19E4BB16-D429-4EB1-ABF8-23585C73C67E}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UE4", "Intermediate\ProjectFiles\UE4.vcxproj", "{2540E1DE-8DA2-4411-93A5-1D26886212C8}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Asistivna", "Intermediate\ProjectFiles\Asistivna.vcxproj", "{59460442-4A13-4786-AB84-773B1A22C120}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Visualizers", "Visualizers", "{B2E02604-5064-4DB0-AA88-28C7039B5FCE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Visualizers", "Visualizers", "{4AD02B33-E1FA-42E3-8420-8044F2C08AFB}"
 	ProjectSection(SolutionItems) = preProject
 		C:\Program Files\Epic Games\UE_4.24\Engine\Extras\VisualStudioDebugging\UE4.natvis = C:\Program Files\Epic Games\UE_4.24\Engine\Extras\VisualStudioDebugging\UE4.natvis
 	EndProjectSection
@@ -82,10 +82,10 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{2540E1DE-8DA2-4411-93A5-1D26886212C8} = {C7B39F6D-6C07-4692-9E46-77A1536B1203}
-		{59460442-4A13-4786-AB84-773B1A22C120} = {F948BC34-81B4-47C2-A174-21B5B42E527A}
+		{2540E1DE-8DA2-4411-93A5-1D26886212C8} = {B48A0BE5-6149-49AC-A03E-BDE6D4CE00F8}
+		{59460442-4A13-4786-AB84-773B1A22C120} = {19E4BB16-D429-4EB1-ABF8-23585C73C67E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {E0A5E4F8-070F-4E16-9C6E-DF87DC9B4270}
+		SolutionGuid = {FED2BC3C-D47C-43F4-BA30-14B0C1828AFD}
 	EndGlobalSection
 EndGlobal
