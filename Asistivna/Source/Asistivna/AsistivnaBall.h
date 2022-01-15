@@ -99,6 +99,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "bulin")
 	bool firstBall;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "throw")
+	bool throwIt;
+
 protected:
 
 	/** Called for side to side input */

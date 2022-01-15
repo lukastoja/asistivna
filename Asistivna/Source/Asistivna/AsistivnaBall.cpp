@@ -82,6 +82,8 @@ AAsistivnaBall::AAsistivnaBall()
 	VratiKameru = false;
 
 	currentString = 1;
+
+	throwIt = true;
 }
 
 void AAsistivnaBall::BeginPlay()
