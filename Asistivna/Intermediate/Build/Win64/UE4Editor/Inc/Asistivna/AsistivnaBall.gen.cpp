@@ -31,6 +31,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 	ASISTIVNA_API UFunction* Z_Construct_UFunction_AAsistivnaBall_SetLineVector();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ASISTIVNA_API UFunction* Z_Construct_UFunction_AAsistivnaBall_SetPlayer();
+	ASISTIVNA_API UFunction* Z_Construct_UFunction_AAsistivnaBall_SetThrowVector();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ASISTIVNA_API UClass* Z_Construct_UClass_ABullin_NoRegister();
 	ASISTIVNA_API UClass* Z_Construct_UClass_ABall_NoRegister();
@@ -56,6 +57,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 			{ "KrajRunde", &AAsistivnaBall::execKrajRunde },
 			{ "SetLineVector", &AAsistivnaBall::execSetLineVector },
 			{ "SetPlayer", &AAsistivnaBall::execSetPlayer },
+			{ "SetThrowVector", &AAsistivnaBall::execSetThrowVector },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -434,6 +436,39 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AAsistivnaBall_SetThrowVector_Statics
+	{
+		struct AsistivnaBall_eventSetThrowVector_Parms
+		{
+			FVector VectorLine;
+		};
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_VectorLine;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AAsistivnaBall_SetThrowVector_Statics::NewProp_VectorLine = { "VectorLine", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AsistivnaBall_eventSetThrowVector_Parms, VectorLine), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AAsistivnaBall_SetThrowVector_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AAsistivnaBall_SetThrowVector_Statics::NewProp_VectorLine,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AAsistivnaBall_SetThrowVector_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Line" },
+		{ "ModuleRelativePath", "AsistivnaBall.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AAsistivnaBall_SetThrowVector_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AAsistivnaBall, nullptr, "SetThrowVector", nullptr, nullptr, sizeof(AsistivnaBall_eventSetThrowVector_Parms), Z_Construct_UFunction_AAsistivnaBall_SetThrowVector_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AAsistivnaBall_SetThrowVector_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04820401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AAsistivnaBall_SetThrowVector_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AAsistivnaBall_SetThrowVector_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AAsistivnaBall_SetThrowVector()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AAsistivnaBall_SetThrowVector_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_AAsistivnaBall_NoRegister()
 	{
 		return AAsistivnaBall::StaticClass();
@@ -576,6 +611,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 		{ &Z_Construct_UFunction_AAsistivnaBall_KrajRunde, "KrajRunde" }, // 1010505555
 		{ &Z_Construct_UFunction_AAsistivnaBall_SetLineVector, "SetLineVector" }, // 3505750861
 		{ &Z_Construct_UFunction_AAsistivnaBall_SetPlayer, "SetPlayer" }, // 1262234526
+		{ &Z_Construct_UFunction_AAsistivnaBall_SetThrowVector, "SetThrowVector" }, // 4055427086
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsistivnaBall_Statics::Class_MetaDataParams[] = {
@@ -867,7 +903,7 @@ void EmptyLinkFunctionForGeneratedCodeAsistivnaBall() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAsistivnaBall, 2733043688);
+	IMPLEMENT_CLASS(AAsistivnaBall, 1195831193);
 	template<> ASISTIVNA_API UClass* StaticClass<AAsistivnaBall>()
 	{
 		return AAsistivnaBall::StaticClass();

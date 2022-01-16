@@ -74,6 +74,15 @@ struct FVector;
 		P_NATIVE_END; \
 	} \
  \
+	DECLARE_FUNCTION(execSetThrowVector) \
+	{ \
+		P_GET_STRUCT(FVector,Z_Param_VectorLine); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetThrowVector(Z_Param_VectorLine); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execSetLineVector) \
 	{ \
 		P_GET_STRUCT(FVector,Z_Param_VectorLine); \
@@ -180,6 +189,15 @@ struct FVector;
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->BallRoll(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSetThrowVector) \
+	{ \
+		P_GET_STRUCT(FVector,Z_Param_VectorLine); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetThrowVector(Z_Param_VectorLine); \
 		P_NATIVE_END; \
 	} \
  \

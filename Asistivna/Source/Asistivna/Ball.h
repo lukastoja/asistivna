@@ -27,6 +27,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = "testStrength")
 	int testStrength;
 
+	UPROPERTY(EditAnywhere, Category = "testStrength")
+		int upStrength;
+
 
 	//flag za odredivanej ce se lopta rollat ili bacat
 	bool flagRT;

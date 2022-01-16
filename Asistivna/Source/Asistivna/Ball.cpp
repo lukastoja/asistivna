@@ -52,7 +52,10 @@ void ABall::SetUpThrowMethod(FVector lineVector, float bar1, float strength1)
 	IzracunajKrajnjuPoziciju(lineVector);
 	flagRT = true;
 
-	FVector throwVector = lineVector * bar * strength * Ball->GetMass() * testStrength;
+	FVector throwVector = lineVector;
+	throwVector.Y = throwVector.Y * bar * strength * Ball->GetMass() * testStrength;
+	throwVector.X = throwVector.X * bar * strength * Ball->GetMass() * testStrength;
+	throwVector.Z = throwVector.Z * bar * strength * Ball->GetMass() * testStrength * -upStrength;
 	UE_LOG(LogTemp, Warning, TEXT("Text, %f %f %f"), throwVector.X, throwVector.Y, throwVector.Z);
 	Ball->AddImpulse(throwVector);
 }

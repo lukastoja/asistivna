@@ -148,6 +148,8 @@ protected:
 	/**line vektor za spawn lopte u pravom smjeru**/
 	FVector lineVector;
 
+	FVector throwVector;
+
 	void IzracunajKrajnjuPoziciju();
 
 	UPROPERTY(EditAnywhere, Category = "BallClass")
@@ -182,6 +184,9 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Line")
 	void SetLineVector(FVector VectorLine);
+
+	UFUNCTION(BlueprintCallable, Category = "Line")
+	void SetThrowVector(FVector VectorLine);
 
 	UFUNCTION(BlueprintCallable, Category = "BallRoll")
 	void BallRoll();
